@@ -1,4 +1,3 @@
-
 "use strict";
 const tSalons = document.querySelector(".t-salons");
 const tMasters = document.querySelector(".t-masters");
@@ -98,7 +97,7 @@ function slowScroll (id) {
     function display(days, hours, minutes, seconds) {}
   }
   
-  countdown("09/15/2020 00:00:00 AM");
+  countdown("11/01/2020 00:00:00 AM");
  
 
 

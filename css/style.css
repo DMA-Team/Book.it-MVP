@@ -11,7 +11,7 @@ body {
 header {
   height: 1015px;
 }
-button{
+button {
   cursor: pointer;
 }
 
@@ -19,7 +19,7 @@ header .menu {
   height: 100px;
   display: flex;
   width: 100%;
-  border-bottom: 1px solid #A1A1A1;
+  border-bottom: 1px solid #a1a1a1;
   background-color: #f7f7f7;
 }
 @keyframes showElement {
@@ -149,6 +149,7 @@ main .block-1 .point-2 {
   position: absolute;
   left: 289px;
   margin-top: -130px;
+  z-index: 0;
 }
 main .block-1 .Ellipse-2 {
   position: absolute;
@@ -244,16 +245,31 @@ main .block-3 .reasons .reason article {
   font-size: 25px;
   line-height: 34px;
   padding-left: 17px;
-}body {
+}
+/* SAYAT */
+/* BEKA */
+body {
   margin: 0;
   font-family: "Nunito", sans-serif;
-  max-width:100%;
-    overflow-y: hidden;
+  max-width: 100%;
+  overflow-y: hidden;
 }
-body, html { overflow-x:hidden; 
+body,
+html {
+  overflow-x: hidden;
 }
-button{
-    border: none;
+button {
+  border: none;
+}
+.lefttopp {
+  position: absolute;
+  display: none;
+}
+.juust {
+  height: 0px;
+}
+.toprightt {
+  display: none;
 }
 .tarif {
   width: 100%;
@@ -265,8 +281,14 @@ button{
   position: absolute;
   width: 100%;
   height: 500px;
-  background:
-    url(../img/background.png);
+  background: url(../img/background.png);
+  background-size: cover;
+  z-index: -1;
+}
+.background1 {
+  display: none;
+  position: absolute;
+  background: url(../img/Group%208.png);
   background-size: cover;
   z-index: -1;
 }
@@ -283,19 +305,14 @@ button{
 .active {
   background: #ffffff;
   border-radius: 50px;
-  width: 260px;
-  height: 80px;
   color: #6c63ff;
-      border-bottom: 2px solid;
   color: #386efe;
-  border-color: #386efe;
 }
 .hide {
   display: none;
 }
 .tabs {
   z-index: 1;
-  max-width: 800px;
   font-weight: 600;
   font-size: 35px;
   color: #ffffff;
@@ -304,23 +321,25 @@ button{
   margin: auto;
 }
 .tabs-button {
-    width: 220px;
-    height: 55px;
+  width: 220px;
+  height: 55px;
   margin-right: 75px;
   margin-left: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-    text-align: center;
 }
 .tabs-content {
   display: flex;
   margin-top: 60px;
-    justify-content: center;
+  justify-content: center;
 }
-.first-content{
-    margin-right: 90px;
+.first-content {
+  margin-right: 90px;
 }
-.second-content{
-    margin-right: 90px;
+.second-content {
+  margin-right: 90px;
 }
 .salons-content {
   background: #ffffff;
@@ -328,17 +347,39 @@ button{
   border-radius: 25px;
   width: 300px;
   height: 480px;
-  align-items: center;
   position: relative;
 }
+.a1st {
+  background: #e56cb5;
+}
+.a2nd {
+  background: #39d0ff;
+}
+.a3rd {
+  background: #f9c332;
+}
+.first-content-part {
+  border-radius: 25px;
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4%;
+}
+.duration {
+  font-size: 110%;
+}
+.stoimost {
+  font-size: 115%;
+}
+
 .content-header {
   font-weight: 600;
   font-size: 35px;
-  line-height: 50px;
   color: #2b044d;
   text-align: center;
-  margin-top: 35px;
-  margin-bottom: 23px;
+  margin-top: 3%;
 }
 .content-list {
   margin-left: 20px;
@@ -348,187 +389,201 @@ button{
   list-style-image: url(../img/check.png);
   font-weight: 300;
   font-size: 20px;
-    line-height: 25px;
+  line-height: 25px;
   margin-bottom: 23px;
   color: #000000;
 }
-.register-block{
-    height: 700px;
-    width: 100%;
-    position: relative;
+.register-block {
+  height: 700px;
+  width: 100%;
+  position: relative;
 }
-.r-heading{
-    height: 10%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-size: 35px;
+.r-heading {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
 }
-.user-signup{
-    margin-left: 15%;
-    width: 30%;
-    height: 80%;
+.user-signup {
+  margin-left: 15%;
+  width: 30%;
+  height: 80%;
 }
-.input{
-    width: 100%;
-    height: 12%;
-    margin-bottom: 5%;
-    box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
-    border: none;
-    font-size: 18px;
-    padding-left: 10%;
+.input {
+  width: 100%;
+  height: 12%;
+  margin-bottom: 5%;
+  box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  font-size: 18px;
+  padding-left: 10%;
 }
-.input-window{
-    height: 85%;
-    width: 100%;
+.input-window {
+  height: 85%;
+  width: 100%;
 }
-.justdiv{
-    display: flex;
-    margin-bottom: 5%;
-    width: 100%;
+.justdiv {
+  display: flex;
+  margin-bottom: 5%;
+  width: 100%;
 }
-.checkbox{
-transform:scale(1.5);
+.checkbox {
+  transform: scale(1.2);
 }
-.conditions{
-    margin-left: 2%;
-    font-size: 17px;
+.conditions {
+  margin-left: 2%;
+  font-size: 17px;
 }
-.r-btn{
-    width: 50%;
-    font-size: 20px;
-    height: 12%;
-    color: white;
-    background: #6C63FF;
-border-radius: 71px;
-    border: none;
-margin-left: 60%;
+.r-btn {
+  width: 50%;
+  font-size: 20px;
+  height: 12%;
+  color: white;
+  background: #6c63ff;
+  border-radius: 71px;
+  border: none;
+  margin-left: 60%;
 }
-.salons1{
-    margin-right: 10%;
+.salons1 {
+  margin-right: 10%;
 }
-.tabs_items{
-    width: 100%;
-    height: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.tabs_items {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.tabs_item{
-    color: #6C63FF;
-     background-color: white;
-    font-size: 25px;
+.tabs_item {
+  color: #6c63ff;
+  background-color: white;
+  font-size: 25px;
+  cursor: pointer;
 }
-.isactive{
-    color: #2B044D;
-    border-bottom:2px solid #2B044D;
+.isactive {
+  color: #2b044d;
+  border-bottom: 2px solid #2b044d;
 }
-.topleft{
-    width: 270px;
-    position: absolute;
-    left: 0px;
-    top: 90px;
-    z-index: -2;
-    
+.topleft {
+  width: 270px;
+  position: absolute;
+  left: 0px;
+  top: 90px;
+  z-index: -2;
 }
-.topright{
-    width: 100px;
-    position: absolute;
-    right: 0px;
-    width: 650px;
+.topright {
+  position: absolute;
+  right: 0px;
+  width: 47%;
+  top: -30px;
 }
-.contact-block{
-    width: 100%;
-    height: 350px;
-    position: relative;
+.contact-block {
+  width: 100%;
+  height: 350px;
+  position: relative;
 }
-.c-nadpisi{
-    width: 100%;
-    height: 100%;
-        display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.c-nadpisi {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.c-heading{
-font-size: 35px;
-    margin-bottom: 40px;
+.c-heading {
+  font-size: 35px;
+  margin-bottom: 40px;
 }
-.dma-email{
-  font-size: 20px;   
-    margin-bottom: 40px;
+.dma-email {
+  font-size: 20px;
+  margin-bottom: 40px;
 }
-.contact-btn{
-    background: #2FD5D0;
-border-radius: 71px;
-    color: white;
-    width: 250px;
-    height: 60px;
-    font-size: 30px;
+.contact-btn {
+  background: #2fd5d0;
+  border-radius: 71px;
+  color: white;
+  width: 250px;
+  height: 60px;
+  font-size: 30px;
 }
-.lefttop{
-    position: absolute;
-    top: 0;
-    width: 150px;
+.lefttop {
+  position: absolute;
+  top: 0;
+  width: 150px;
 }
-.screenshot{
-    width: 100%;
-    height: 2600px;
-    position: relative;
-    display: flex;
-justify-content: center;
+.screen {
+  width: 100%;
+  height: 2600px;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
-.lefttop1{
-    position: absolute;
-    top: 10px;
-    left: 0;
-    width: 200px;
+.lefttop1 {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 200px;
 }
-.righttop1{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 150px;
+.righttop1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
 }
-.s-content{
-    margin-top: 6%;
-    width: 50%;
-    height: 90%;
+.lefttop2 {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  display: none;
 }
-.screen-text{
-    width: 100%;
-    display: flex;
-    height: 20%;
+.righttop2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
 }
-.s-img{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
+.s-content {
+  margin-top: 6%;
+  width: 50%;
+  height: 90%;
 }
-.s-text{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.screen-text {
+  width: 100%;
+  display: flex;
+  height: 20%;
 }
-.screens{
-    width: 85%;
+.s-img {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
-.smallimgs{
-    width: 130px;
-    margin-bottom: 8%;
+.s-text {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.opisanie{
-    text-align: center;
-    max-width: 85%;
-    font-size: 18px;
-line-height: 20px;
-text-align: center;
-color: #6C63FF;
+.screens {
+  width: 85%;
 }
+.smallimgs {
+  width: 35%;
+  margin-bottom: 8%;
+}
+.opisanie {
+  text-align: center;
+  max-width: 85%;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  color: #6c63ff;
+}
+/* BEKA */
+/* ABA */
 .step-content,
 .step {
   display: flex;
@@ -538,9 +593,23 @@ body {
   font-family: "Nunito", sans-serif;
 }
 .plan {
-  background-image: url("../img/first-background.png");
-  background-size: 100% 100%;
-  height: 2000px;
+  height: 1800px;
+  position: relative;
+}
+.group1 {
+  position: absolute;
+  top: 600px;
+  z-index: -1;
+  width: 50%;
+  height: 60%;
+}
+.group2 {
+  position: absolute;
+  right: 0;
+  top: 700px;
+  z-index: -1;
+  width: 35%;
+  height: 40%;
 }
 .plan-title {
   font-weight: 600;
@@ -596,24 +665,33 @@ body {
   color: #383838;
 }
 .advantages-container {
+  width: 90%;
+  max-width: 1500px;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 100px;
 }
 .macbook {
-  width: 65%;
-  flex-basis: 50%;
+  width: 780px;
+  flex-basis: 70%;
   align-items: center;
   margin-bottom: 50px;
 }
+.first-part {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+  align-items: flex-end;
+  justify-content: center;
+}
 .first-part .advantages-item {
-  flex-basis: 50%;
   margin-bottom: 20px;
 }
 .second-part {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-basis: 100%;
 }
@@ -646,15 +724,46 @@ body {
   max-width: 200px;
 }
 .instagram {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(../img/i-background.png);
-  background-size: 100% 100%;
+  background: #6c63ff;
   height: 500px;
   padding-top: 5px;
 }
+.ellipse1 {
+  position: absolute;
+  z-index: 0;
+  top: 5%;
+  left: 2%;
+  width: 12%;
+  height: 32%;
+  background: #f9c332;
+  box-shadow: 4px 10px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+.ellipse2 {
+  position: absolute;
+  z-index: 0;
+  top: 35%;
+  right: 3%;
+  width: 25%;
+  height: 57%;
+  background: #2fd5d0;
+  box-shadow: 4px 10px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+.group3 {
+  position: absolute;
+  z-index: 0;
+  top: 42%;
+  left: 15%;
+  width: 17%;
+  height: 40%;
+}
 .i-title {
+  z-index: 1;
   font-weight: bold;
   font-size: 50px;
   text-align: center;
@@ -685,7 +794,6 @@ body {
   border: none;
   cursor: pointer;
 }
-
 .divushka {
   display: flex;
   align-items: center;
@@ -749,574 +857,1779 @@ body {
   font-size: 25px;
   line-height: 41px;
   text-align: right;
-  align-items:center;
+  align-items: center;
 }
-
-    @media(min-width:1400px){
-    
-        .tabs {
-  max-width: 800px;
-  font-weight: 600;
-  font-size: 40px;
-}
-.tabs-button {
-  margin-right: 75px;
-  margin-left: 75px;
-}
-.tabs-content {
-  margin-top: 60px;
-}
-.first-content{
+/* ABA */
+/* BEKA */
+@media (min-width: 1400px) {
+  .tabs {
+    max-width: 800px;
+    font-weight: 600;
+    font-size: 40px;
+  }
+  .tabs-button {
+    margin-right: 75px;
+    margin-left: 75px;
+  }
+  .tabs-content {
+    margin-top: 60px;
+  }
+  .first-content {
     margin-right: 90px;
-}
-.second-content{
+  }
+  .second-content {
     margin-right: 90px;
-}
-.salons-content {
-  box-shadow: 0px 0px 10px #bebebe;
-  border-radius: 25px;
-  width: 340px;
-  height: 530px;
-}
-        .tabs-button{
-            width: 220px;
-            height: 50px;
-            font-size: 33px;
-        }
-.content-header {
-  font-weight: 600;
-  font-size: 42px;
-  line-height: 57px;
-  margin-top: 35px;
-  margin-bottom: 20px;
-}
-.content-list {
-  margin-left: 30px;
-  margin-top: 0;
-}
-.tabs-item {
-  list-style-image: url(../img/check.png);
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 30px;
-  margin-bottom: 30px;
-}
-        .tarif{
-            height: 870px;
-        }
-}
-@media(min-width: 1800px){
-    .contact-block{
-        height: 500px;
-    }
-    .c-heading{
-font-size: 45px;
-        margin-bottom: 60px;
-    }
-    .dma-email{
-        font-size: 28px;
-        margin-bottom: 60px;
-    }
-    .lefttop{
-        width: 210px;
-    }
-    .contact-btn{
-        width: 300px;
-        height: 75px;
-        font-size: 40px;
-    }
-    .screenshot{
-        height: 3200px;
-    }
-    .opisanie{
-        font-size: 26px;
-        line-height: 29px;
-    }
-    .register-block{
-        height: 1000px;
-    }
-    .r-heading{
-        font-size: 45px;
-        font-weight: bold;
-    }
-    .tabs_item{
-        font-size: 35px;
-    }
-    .topleft{
-        width: 24%;
-    }
-    .topright{
-        width: 50%;
-    }
-    .input{
-        font-size: 25px;
-        margin-bottom: 8%;
-    }
-    .conditions{
-        font-size: 20px;
-    }
-    .r-btn{
-        font-size: 32px;
-    }
-      .menu {
+  }
+  .salons-content {
+    box-shadow: 0px 0px 10px #bebebe;
+    border-radius: 25px;
+    width: 340px;
+    height: 530px;
+  }
+  .tabs-button {
+    width: 220px;
+    height: 50px;
+    font-size: 33px;
+  }
+  .content-header {
+    font-weight: 600;
+    font-size: 42px;
+  }
+  .content-list {
+    margin-left: 30px;
+    margin-top: 0;
+  }
+  .tabs-item {
+    list-style-image: url(../img/check.png);
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 26px;
+  }
+  .tarif {
+    height: 870px;
+  }
+  .screen {
+    height: 3000px;
+  }
+  .opisanie {
+    font-size: 22px;
+  }
+  .register-block {
+    height: 850px;
+  }
+  .r-heading {
+    font-weight: bold;
+    font-size: 45px;
+  }
+  .conditions {
+    font-size: 20px;
+  }
+  .checkbox {
+    transform: scale(1.5);
+  }
+  .input {
     font-size: 24px;
+    padding-left: 10%;
+    margin-bottom: 7%;
+  }
+  .topleft {
+    width: 22%;
+  }
+  .tabs_item {
+    font-size: 32px;
+  }
+  .r-btn {
+    font-size: 30px;
+  }
+  .contact-block {
+    height: 450px;
+  }
+  .c-heading {
+    font-size: 45px;
+  }
+  .dma-email {
+    font-size: 25px;
+  }
+  .contact-btn {
+    width: 300px;
+    height: 70px;
+    font-size: 40px;
+  }
+}
+@media (min-width: 1800px) {
+  .duration {
+    font-size: 25px;
+  }
+  .stoimost {
+    font-size: 25px;
+  }
+  .contact-block {
+    height: 500px;
+  }
+  .c-heading {
+    font-size: 45px;
+    margin-bottom: 60px;
+  }
+  .dma-email {
+    font-size: 28px;
+    margin-bottom: 60px;
+  }
+  .lefttop {
+    width: 210px;
+  }
+  .contact-btn {
+    width: 300px;
+    height: 75px;
+    font-size: 40px;
+  }
+  .opisanie {
+    font-size: 26px;
+    line-height: 29px;
+  }
+  .register-block {
+    height: 1000px;
+  }
+  .r-heading {
+    font-size: 45px;
+    font-weight: bold;
+  }
+  .tabs_item {
+    font-size: 35px;
+  }
+  .topleft {
+    width: 24%;
+  }
+  .topright {
+    width: 50%;
+  }
+  .input {
+    font-size: 25px;
+    margin-bottom: 8%;
+  }
+  .conditions {
+    font-size: 20px;
+  }
+  .r-btn {
+    font-size: 32px;
   }
   .tabs {
-  z-index: 1;
-  max-width: 800px;
-  font-weight: 600;
-  font-size: 40px;
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-}
-    .tarif{
-        height: 1100px;
-    }
-    .background{
-        height: 650px;
-    }
-.tabs-button {
-  margin-right: 75px;
-  margin-left: 75px;
-  cursor: pointer;
-    width: 250px;
-        height: 70px;
-    padding-top: 15px;
+    z-index: 1;
+    max-width: 800px;
+    font-weight: 600;
     font-size: 40px;
-}
-.tabs-content {
-  display: flex;
-  margin-top: 60px;
+    color: #ffffff;
+    display: flex;
     justify-content: center;
-}
-.first-content{
+    margin: auto;
+  }
+  .tarif {
+    height: 1100px;
+  }
+  .background {
+    height: 600px;
+  }
+  .tabs-button {
+    margin-right: 75px;
+    margin-left: 75px;
+    width: 250px;
+    height: 70px;
+    font-size: 40px;
+  }
+  .tabs-content {
+    display: flex;
+    margin-top: 60px;
+    justify-content: center;
+  }
+  .first-content {
     margin-right: 120px;
-}
-.second-content{
+  }
+  .second-content {
     margin-right: 120px;
+  }
+  .salons-content {
+    border-radius: 35px;
+    width: 400px;
+    height: 650px;
+  }
+  .content-header {
+    font-size: 50px;
+  }
+  .content-list {
+    margin-left: 35px;
+    margin-top: 0;
+  }
+  .tabs-item {
+    list-style-image: url(../img/check.png);
+    font-weight: 300;
+    font-size: 27px;
+    line-height: 40px;
+    margin-bottom: 35px;
+  }
+  .t-heading {
+    font-size: 60px;
+    line-height: 150px;
+  }
+  .screen {
+    height: 3700px;
+  }
 }
-.salons-content {
-  border-radius: 35px;
-  width: 400px;
-  height: 650px;
-}
-.content-header {
-  font-size: 50px;
-  line-height: 60px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-.content-list {
-  margin-left: 35px;
-  margin-top: 0;
-}
-.tabs-item {
-  list-style-image: url(../img/check.png);
-  font-weight: 300;
-  font-size: 27px;
-  line-height: 40px;
-  margin-bottom: 35px;
-}
-    .active{
-        width: 250px;
-        height: 70px;
-    }
-    .t-heading{
-        font-size: 60px;
-        line-height: 150px;
-    }
-}
-@media (max-width: 1100px) {
-    .tarif{
-        height: 700px;
-}
-  .tabs {
-  max-width: 1000px;
-  font-weight: 600;
-  font-size: 20px;
-}
-    .active {
-  width: 120px;
-  height: 40px;
-}
-    .t-heading{
-        font-size: 30px;
-    }
-.tabs-button {
-  margin-right: 50px;
-  margin-left: 50px;
-  text-align: center;
-    padding-top: 1%;
-}
-.tabs-content {
-  margin-top: 40px;
-}
-.first-content{
-    margin-right: 50px;
-}
-.second-content{
-    margin-right: 50px;
-}
-.salons-content {
-  width: 250px;
-  height: 400px;
-}
-
-.content-header {
-  font-size: 30px;
-  line-height: 45px;
-  margin-top: 25px;
-  margin-bottom: 20px;
-}
-.content-list {
-  margin-left: 20px;
-}
-.tabs-item {
-  font-size: 15px;
-  line-height: 25px;
-  margin-bottom: 15px;
-}
-    
-}
-@media (max-width: 1000px){
-    .tarif{
-        height: 550px;
-}
-  .tabs {
-  max-width: 1000px;;
-  font-weight: 600;
-  font-size: 20px;
-}
-    .active {
-  width: 100px;
-  height: 30px;
-}
-    .t-heading{
-        font-size: 27px;
-        padding-top: 25px;
-    }
-.tabs-button {
-    width: 150px;
-    height: 35px;
-  margin-right: 50px;
-  margin-left: 50px;
-  text-align: center;
-    cursor: pointer;
-}
-.tabs-content {
-  margin-top: 30px;
-}
-.first-content{
-    margin-right: 30px;
-}
-.second-content{
-    margin-right: 30px;
-}
-.salons-content {
-  width: 200px;
-  height: 330px;
-  border-radius: 15px;
-}
-
-.content-header {
-  font-size: 25px;
-  line-height: 45px;
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
-.content-list {
-  margin-left: 1px;
-}
-.tabs-item {
-  font-size: 13px;
-    line-height: 18px;
-  margin-bottom: 15px;
-}
-    .tabs-item {
-  list-style-image: url(../img/check1.png);
-
-}
-    .background{
-        height: 300px;
-    }
-}
-@media (max-width: 780px){
-    .tarif{
-        height: 550px;
-}
-  .tabs {
-  max-width: 500px;
-  font-weight: 600;
-  font-size: 22px;
-}
-    .active {
-  width: 100px;
-  height: 30px;
-}
-    .t-heading{
-        font-size: 27px;
-        padding-top: 25px;
-        height: 60px;
-    }
-.tabs-button {
-    width: 150px;
-    height: 35px;
-  margin-right: 50px;
-  margin-left: 50px;
-  text-align: center;
-    cursor: pointer;
-}
-.tabs-content {
-  margin-top: 30px;
-}
-.first-content{
-    margin-right: 30px;
-}
-.second-content{
-    margin-right: 30px;
-}
-.salons-content {
-  width: 220px;
-  height: 350px;
-  border-radius: 15px;
-}
-
-.content-header {
-  font-size: 25px;
-  line-height: 45px;
-  margin-top: 25px;
-  margin-bottom: 15px;
-}
-.content-list {
-  margin-left: 1px;
-}
-.tabs-item {
-  font-size: 15px;
-    line-height: 18px;
-  margin-bottom: 17px;
-}
-    .tabs-item {
-  list-style-image: url(../img/check1.png);
-
-}
-    .background{
-        height: 300px;
-    }
-}
-@media (max-width: 680px){
-    .tarif{
-        height: 1400px;
-}
-  .tabs {
-  max-width: 500px;
-  font-weight: 600;
-  font-size: 22px;
-}
-    .active {
-  width: 150px;
-  height: 35px;
-}
-    .t-heading{
-        font-size: 30px;
-        padding-top: 25px;
-        height: 60px;
-    }
-.tabs-button {
-    width: 150px;
-    height: 35px;
-  margin-right: 50px;
-  margin-left: 50px;
-  text-align: center;
-    cursor: pointer;
+@media (min-width: 1700px) and (max-width: 1799px) {
+  .duration {
+    font-size: 23px;
+  }
+  .stoimost {
+    font-size: 23px;
+  }
+  .contact-block {
+    height: 500px;
+  }
+  .c-heading {
+    font-size: 45px;
+    margin-bottom: 60px;
+  }
+  .dma-email {
+    font-size: 28px;
+    margin-bottom: 60px;
+  }
+  .lefttop {
+    width: 210px;
+  }
+  .contact-btn {
+    width: 300px;
+    height: 75px;
+    font-size: 40px;
+  }
+  .opisanie {
+    font-size: 26px;
+    line-height: 29px;
+  }
+  .register-block {
+    height: 950px;
+  }
+  .r-heading {
+    font-size: 45px;
+    font-weight: bold;
+  }
+  .tabs_item {
+    font-size: 35px;
+  }
+  .topleft {
+    width: 24%;
+  }
+  .topright {
+    width: 50%;
+  }
+  .checkbox {
+    transform: scale(1.7);
+  }
+  .input {
     font-size: 25px;
-    padding-bottom: 5px;
+    margin-bottom: 5%;
+  }
+  .conditions {
+    font-size: 25px;
+  }
+  .r-btn {
+    font-size: 32px;
+  }
+  .tabs {
+    z-index: 1;
+    max-width: 800px;
+    font-weight: 600;
+    font-size: 40px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+  .tarif {
+    height: 1100px;
+  }
+  .background {
+    height: 600px;
+  }
+  .tabs-button {
+    margin-right: 75px;
+    margin-left: 75px;
+    width: 250px;
+    height: 70px;
+    font-size: 40px;
+  }
+  .tabs-content {
+    display: flex;
+    margin-top: 60px;
+    justify-content: center;
+  }
+  .first-content {
+    margin-right: 120px;
+  }
+  .second-content {
+    margin-right: 120px;
+  }
+  .salons-content {
+    border-radius: 35px;
+    width: 400px;
+    height: 650px;
+  }
+  .content-header {
+    font-size: 50px;
+  }
+  .content-list {
+    margin-left: 35px;
+    margin-top: 0;
+  }
+  .tabs-item {
+    list-style-image: url(../img/check.png);
+    font-weight: 300;
+    font-size: 27px;
+    line-height: 40px;
+    margin-bottom: 35px;
+  }
+  .t-heading {
+    font-size: 60px;
+    line-height: 150px;
+  }
+  .screen {
+    height: 3400px;
+  }
 }
-.tabs-content {
-  margin-top: 30px;
+@media (min-width: 1600px) and (max-width: 1699px) {
+  .duration {
+    font-size: 23px;
+  }
+  .stoimost {
+    font-size: 23px;
+  }
+  .contact-block {
+    height: 500px;
+  }
+  .c-heading {
+    font-size: 45px;
+    margin-bottom: 60px;
+  }
+  .dma-email {
+    font-size: 28px;
+    margin-bottom: 60px;
+  }
+  .lefttop {
+    width: 210px;
+  }
+  .contact-btn {
+    width: 300px;
+    height: 75px;
+    font-size: 40px;
+  }
+  .opisanie {
+    font-size: 23px;
+    line-height: 26px;
+  }
+  .register-block {
+    height: 950px;
+  }
+  .r-heading {
+    font-size: 45px;
+    font-weight: bold;
+  }
+  .tabs_item {
+    font-size: 35px;
+  }
+  .topleft {
+    width: 22%;
+  }
+  .topright {
+    width: 50%;
+  }
+  .checkbox {
+    transform: scale(1.7);
+  }
+  .input {
+    font-size: 25px;
+    margin-bottom: 5%;
+  }
+  .conditions {
+    font-size: 23px;
+  }
+  .r-btn {
+    font-size: 32px;
+  }
+  .tabs {
+    z-index: 1;
+    max-width: 800px;
+    font-weight: 600;
+    font-size: 40px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+  .tarif {
+    height: 1100px;
+  }
+  .background {
+    height: 600px;
+  }
+  .lefttop1 {
+    width: 250px;
+  }
+  .righttop1 {
+    width: 200px;
+  }
+  .tabs-button {
+    margin-right: 75px;
+    margin-left: 75px;
+    width: 250px;
+    height: 70px;
+    font-size: 40px;
+  }
+  .tabs-content {
+    display: flex;
+    margin-top: 60px;
+    justify-content: center;
+  }
+  .first-content {
+    margin-right: 120px;
+  }
+  .second-content {
+    margin-right: 120px;
+  }
+  .salons-content {
+    border-radius: 35px;
+    width: 400px;
+    height: 650px;
+  }
+  .content-header {
+    font-size: 50px;
+  }
+  .content-list {
+    margin-left: 35px;
+    margin-top: 0;
+  }
+  .tabs-item {
+    list-style-image: url(../img/check.png);
+    font-weight: 300;
+    font-size: 27px;
+    line-height: 40px;
+    margin-bottom: 35px;
+  }
+  .t-heading {
+    font-size: 60px;
+    line-height: 150px;
+  }
+  .screen {
+    height: 3200px;
+  }
+}
+@media (min-width: 1500px) and (max-width: 1599px) {
+  .duration {
+    font-size: 20px;
+  }
+  .stoimost {
+    font-size: 20px;
+  }
+  .contact-block {
+    height: 500px;
+  }
+  .c-heading {
+    font-size: 45px;
+    margin-bottom: 60px;
+  }
+  .dma-email {
+    font-size: 28px;
+    margin-bottom: 60px;
+  }
+  .lefttop {
+    width: 210px;
+  }
+  .contact-btn {
+    width: 300px;
+    height: 75px;
+    font-size: 40px;
+  }
+  .opisanie {
+    font-size: 23px;
+    line-height: 26px;
+  }
+  .register-block {
+    height: 950px;
+  }
+  .r-heading {
+    font-size: 45px;
+    font-weight: bold;
+  }
+  .tabs_item {
+    font-size: 35px;
+  }
+  .topleft {
+    width: 22%;
+  }
+  .topright {
+    width: 50%;
+  }
+  .checkbox {
+    transform: scale(1.7);
+  }
+  .input {
+    font-size: 25px;
+    margin-bottom: 5%;
+  }
+  .conditions {
+    font-size: 22px;
+  }
+  .r-btn {
+    font-size: 32px;
+  }
+  .tabs {
+    max-width: 800px;
+    font-weight: 600;
+    font-size: 40px;
+  }
+  .tabs-button {
+    margin-right: 75px;
+    margin-left: 75px;
+  }
+  .tabs-content {
+    margin-top: 60px;
+  }
+  .first-content {
+    margin-right: 90px;
+  }
+  .second-content {
+    margin-right: 90px;
+  }
+  .salons-content {
+    box-shadow: 0px 0px 10px #bebebe;
+    border-radius: 25px;
+    width: 340px;
+    height: 530px;
+  }
+  .tabs-button {
+    width: 220px;
+    height: 50px;
+    font-size: 33px;
+  }
+  .content-header {
+    font-weight: 600;
+    font-size: 42px;
+  }
+  .content-list {
+    margin-left: 30px;
+    margin-top: 0;
+  }
+  .tabs-item {
+    list-style-image: url(../img/check.png);
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 25px;
+  }
+  .tarif {
+    height: 870px;
+  }
+  .screen {
+    height: 3100px;
+  }
+}
+/* BEKA */
+@media (max-width: 1370px) {
+  .plan {
+    height: 1400px;
+    position: relative;
+  }
+  .group1 {
+    width: 50%;
+    height: 50%;
+  }
+  .group2 {
+    width: 30%;
+    height: 25%;
+  }
+  .steps {
+    height: 600px;
+  }
+  .step-content {
+    width: 200px;
+    height: 250px;
+  }
+  .step-title {
+    margin-top: 0;
+    font-size: 25px;
+    line-height: 39px;
+  }
+  .step-text {
+    margin-top: 0;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .advantages-item {
+    width: 220px;
+    height: 220px;
+  }
+  .advantages-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+  }
+  .advantages-title {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .advantages-text {
+    font-size: 17px;
+    line-height: 27px;
+  }
+  .group3 {
+    top: 42%;
+    left: 10%;
+    width: 17%;
+    height: 40%;
+  }
+  /* BEKA */
+  .conditions {
+    font-size: 16px;
+  }
+  .screen {
+    height: 2400px;
+  }
+  .opisanie {
+    font-size: 17px;
+  }
+  /* BEKA */
+}
+@media (max-width: 1050px) {
+  .plan {
+    height: 1700px;
+    position: relative;
+  }
+  .steps {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 410px;
+  }
+  .step {
+    flex-basis: 50%;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    padding-top: 0 !important;
+  }
+  .step-number {
+    margin-top: 5px;
+  }
+  .advantages-container {
+    margin-top: 80px;
+  }
+  .advantages-item {
+    width: 200px;
+    height: 200px;
+  }
+  .advantages-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+  }
+  .advantages-title {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .advantages-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .i-title {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  .i-text {
+    font-size: 25px;
+    line-height: 45px;
+  }
+  .ellipse1 {
+    top: 5%;
+    left: 2%;
+    width: 12%;
+    height: 30%;
+  }
+  .ellipse2 {
+    top: 40%;
+    right: 3%;
+    width: 20%;
+    height: 50%;
+  }
+  .group3 {
+    left: 7%;
+    top: 50%;
+  }
+  /* BEKA */
+  .duration {
+    font-size: 15px;
+  }
+  .stoimost {
+    font-size: 15px;
+  }
+  .tarif {
+    height: 700px;
+  }
+  .tabs {
+    max-width: 1000px;
+    font-weight: 600;
+    font-size: 27px;
+  }
+  .t-heading {
+    font-size: 30px;
+  }
+  .tabs-button {
+    margin-right: 50px;
+    margin-left: 50px;
+    text-align: center;
+    width: 170px;
+  }
+  .tabs-content {
+    margin-top: 40px;
+  }
+  .first-content {
+    margin-right: 50px;
+  }
+  .second-content {
+    margin-right: 50px;
+  }
+  .salons-content {
+    width: 250px;
+    height: 400px;
+  }
+  .register-block {
+    height: 600px;
+  }
+  .content-header {
+    font-size: 30px;
+  }
+  .content-list {
+    margin-left: 10px;
+  }
+  .tabs-item {
+    font-size: 17px;
+    line-height: 25px;
+    margin-bottom: 10px;
+  }
+  .conditions {
+    font-size: 14px;
+  }
+  .topright {
+    top: 0px;
+  }
+  .topleft {
+    width: 22%;
+  }
+  .screen {
+    height: 2200px;
+  }
+  .opisanie {
+    font-size: 17px;
+  }
+  .lefttop {
+    width: 130px;
+  }
+  /* BEKA */
+}
+@media (max-width: 940px) {
+  .plan {
+    height: 2200px;
+  }
+  .group1 {
+    width: 50%;
+    height: 40%;
+  }
+  .group2 {
+    width: 30%;
+    height: 20%;
+    top: 600px;
+  }
+  .macbook {
+    flex-basis: 100%;
+  }
+  .first-part {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .second-part {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .div .advantages-item {
+    margin: auto;
+  }
+  .div {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+  }
+  .instagram {
+    height: 400px;
+  }
+  .i-title {
+    font-size: 37px;
+    margin-bottom: 30px;
+  }
+  .i-text {
+    font-size: 22px;
+    line-height: 45px;
+    max-width: 400px;
+  }
+  .subscribe {
+    width: 350px;
+    height: 90px;
+    font-size: 35px;
+  }
+  .ellipse1 {
+    top: 5%;
+    left: 2%;
+    width: 12%;
+    height: 27%;
+  }
+  .ellipse2 {
+    top: 40%;
+    right: 3%;
+    width: 20%;
+    height: 45%;
+  }
+  .group3 {
+    left: 5%;
+    top: 50%;
+    width: 17%;
+    height: 37%;
+  }
+  /* BEKA */
+  .duration {
+    font-size: 13px;
+  }
+  .stoimost {
+    font-size: 13px;
+  }
+  .tarif {
+    height: 550px;
+  }
+  .tabs {
+    max-width: 1000px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+  .t-heading {
+    font-size: 27px;
+    padding-top: 25px;
+  }
+  .tabs-button {
+    width: 150px;
+    height: 45px;
+    margin-right: 50px;
+    margin-left: 50px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .tabs-content {
+    margin-top: 30px;
+  }
+  .first-content {
+    margin-right: 30px;
+  }
+  .second-content {
+    margin-right: 30px;
+  }
+  .salons-content {
+    width: 200px;
+    height: 330px;
+    border-radius: 15px;
+  }
+  .first-content-part {
+    border-radius: 15px;
+  }
+  .content-header {
+    font-size: 25px;
+  }
+  .content-list {
+    margin-left: 1px;
+  }
+  .tabs-item {
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 12px;
+  }
+  .tabs-item {
+    list-style-image: url(../img/check1.png);
+  }
+  .background {
+    height: 300px;
+  }
+  .input {
+    font-size: 15px;
+    padding-left: 5%;
+  }
+  .screen {
+    height: 2000px;
+  }
+  .opisanie {
+    font-size: 15px;
+    line-height: 17px;
+  }
+  .user-signup {
+    width: 35%;
+  }
+  /* BEKA */
+}
+/* BEKA */
+@media (max-width: 900px) {
+  .screen {
+    height: 1800px;
+  }
+  .conditions {
+    font-size: 13px;
+  }
+  .tabs_item {
+    font-size: 23px;
+  }
+}
+/* BEKA */
+@media (max-width: 750px) {
+  .plan {
+    height: 2100px;
+  }
+  .group1 {
+    width: 50%;
+    height: 35%;
+  }
+  .group2 {
+    width: 30%;
+    height: 15%;
+  }
+  .instagram {
+    height: 400px;
+  }
+  .i-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .i-text {
+    font-size: 22px;
+    line-height: 45px;
+    max-width: 400px;
+  }
+  .ellipse1 {
+    top: 5%;
+    left: 2%;
+    width: 12%;
+    height: 27%;
+  }
+  .ellipse2 {
+    top: 40%;
+    right: 3%;
+    width: 15%;
+    height: 37%;
+  }
+  .group3 {
+    left: 2%;
+  }
+  .vyxod {
+    font-size: 28px;
+    line-height: 60px;
+  }
+  .footer-link {
+    font-size: 20px;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    margin-left: 7%;
+  }
+  /* BEKA */
+  .first-content-part {
+    height: 27%;
+    border-radius: 25px;
+  }
+  .duration {
+    font-size: 18px;
+  }
+  .stoimost {
+    font-size: 18px;
+  }
+  .tarif {
+    height: 1500px;
+  }
+  .tabs {
+    max-width: 500px;
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .t-heading {
+    font-size: 27px;
+    padding-top: 25px;
+    height: 60px;
+  }
+  .tabs-button {
+    width: 120px;
+    height: 40px;
+    margin-right: 50px;
+    margin-left: 50px;
+    cursor: pointer;
+  }
+  .tabs-content {
+    margin-top: 30px;
     flex-direction: column;
     align-items: center;
-}
-.first-content{
+  }
+  .first-content {
     margin-right: 0px;
-}
-.second-content{
+    margin-bottom: 30px;
+  }
+  .second-content {
     margin-right: 0px;
-}
-.salons-content {
-  width: 270px;
-  height: 380px;
-  margin-bottom: 25px;
-  border-radius: 35px;
-}
-.content-header {
-  font-size: 30px;
-  line-height: 45px;
-  margin-top: 25px;
-  margin-bottom: 17px;
-}
-.content-list {
-  margin-left: 7px;
-}
-.tabs-item {
-  font-size: 19px;
+    margin-bottom: 50px;
+  }
+  .salons-content {
+    width: 250px;
+    height: 380px;
+    border-radius: 25px;
+  }
+  .content-header {
+    font-size: 30px;
+  }
+  .content-list {
+    margin-left: 3px;
+  }
+  .tabs-item {
+    font-size: 17.5px;
     line-height: 18px;
-  margin-bottom: 23px;
+    margin-bottom: 20px;
+  }
+  .tabs-item {
+    list-style-image: url(../img/check1.png);
+  }
+  .background {
+    height: 100%;
+    display: none;
+  }
+  .background1 {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .r-heading {
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .user-signup {
+    width: 40%;
+  }
+  .righttop1 {
+    width: 15%;
+  }
+  .lefttop1 {
+    width: 15%;
+  }
+  .s-content {
+    width: 60%;
+  }
+  .screen {
+    height: 1900px;
+  }
+  /* BEKA */
 }
-    .tabs-item {
-  list-style-image: url(../img/check1.png);
-
-}
-    .background{
-        height: 300px;
-    }
-}
-@media (max-width: 534px){
-    .tarif{
-        height: 1400px;
-}
+@media (max-width: 660px) {
+  .plan {
+    height: 2000px;
+  }
+  .group1 {
+    top: 1000px;
+    width: 55%;
+    height: 35%;
+  }
+  .group2 {
+    top: 700px;
+    width: 30%;
+    height: 15%;
+  }
+  .steps {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 300px;
+  }
+  .plan-title {
+    font-size: 50px;
+    line-height: 39px;
+  }
+  .step-content {
+    padding-top: 0;
+    width: 180px;
+    height: 230px;
+  }
+  .step-title {
+    margin-top: 5px;
+    font-size: 23px;
+    line-height: 39px;
+  }
+  .step-text {
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .instagram {
+    height: 300px;
+  }
+  .i-title {
+    font-size: 27px;
+    margin-bottom: 10px;
+  }
+  .i-text {
+    font-size: 20px;
+    line-height: 40px;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+  .subscribe {
+    width: 300px;
+    height: 80px;
+    font-size: 30px;
+  }
+  /* BEKA */
+  .tarif {
+    height: 1500px;
+  }
   .tabs {
-  max-width: 500px;
-  font-weight: 600;
-  font-size: 22px;
-}
-    .active {
-  width: 150px;
-  height: 35px;
-}
-    .t-heading{
-        font-size: 30px;
-        padding-top: 25px;
-        height: 60px;
-    }
-.tabs-button {
-    width: 150px;
-    height: 35px;
-  margin-right: 50px;
-  margin-left: 50px;
-  text-align: center;
+    max-width: 500px;
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .t-heading {
+    font-size: 30px;
+    padding-top: 25px;
+    height: 60px;
+  }
+  .tabs-button {
+    width: 140px;
+    height: 40px;
+    margin-right: 50px;
+    margin-left: 50px;
     cursor: pointer;
     font-size: 25px;
-    padding-bottom: 5px;
+  }
+  .first-content {
+    margin-right: 0px;
+  }
+  .second-content {
+    margin-right: 0px;
+  }
+  .salons-content {
+    width: 270px;
+    height: 400px;
+    margin-bottom: 25px;
+    border-radius: 30px;
+  }
+  .first-content-part {
+    height: 27%;
+    border-radius: 30px;
+  }
+  .content-header {
+    font-size: 30px;
+  }
+  .content-list {
+    margin-left: 7px;
+  }
+  .tabs-item {
+    font-size: 19px;
+    line-height: 18px;
+    margin-bottom: 23px;
+  }
+  .tabs-item {
+    list-style-image: url(../img/check1.png);
+  }
+  .topright {
+    display: none;
+  }
+  .user-signup {
+    width: 60%;
+    margin-left: 20%;
+  }
+  .register-block {
+    height: 700px;
+  }
+  .conditions {
+    font-size: 18px;
+  }
+  .input {
+    font-size: 20px;
+  }
+  .tabs_item {
+    font-size: 30px;
+  }
+  .checkbox {
+    transform: scale(1.7);
+  }
+  .topleft {
+    top: 25%;
+    width: 33%;
+  }
+  .r-btn {
+    font-size: 26px;
+  }
+  .screen {
+    height: 2000px;
+  }
+  .s-content {
+    width: 70%;
+  }
+  .juust {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .toprightt {
+    display: block;
+    width: 80%;
+  }
+  .lefttop {
+    display: none;
+  }
+  .lefttopp {
+    display: block;
+    top: 0px;
+    width: 20%;
+  }
+  .c-heading {
+    font-size: 22px;
+  }
+  .dma-email {
+    font-size: 28px;
+  }
+  .lefttop1 {
+    position: absolute;
+    display: none;
+  }
+  .righttop1 {
+    position: absolute;
+    display: none;
+  }
+  .lefttop2 {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 20%;
+    display: block;
+  }
+  .righttop2 {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 30%;
+  }
+  .smallimgs {
+    width: 50%;
+    margin-bottom: 3%;
+  }
+  /* BEKA */
 }
-.tabs-content {
-  margin-top: 30px;
+@media (max-width: 550px) {
+  .plan {
+    height: 1900px;
+  }
+  .plan-title {
+    font-size: 45px;
+    line-height: 39px;
+  }
+  .i-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .subscribe {
+    width: 250px;
+    height: 70px;
+    font-size: 25px;
+  }
+  .ellipse2 {
+    top: 55%;
+    right: 3%;
+    width: 15%;
+    height: 30%;
+  }
+  .vyxod {
+    font-size: 22px;
+  }
+  .footer-link {
+    font-size: 18px;
+  }
+  /* BEKA */
+  .lefttop2 {
+    width: 10%;
+  }
+  .salons-content {
+    width: 270px;
+    height: 430px;
+  }
+  .first-content-part {
+    height: 27%;
+    border-radius: 30px;
+  }
+  .tabs-item {
+    margin-bottom: 25px;
+  }
+  .righttop2 {
+    width: 15%;
+  }
+  .screen {
+    height: 1600px;
+  }
+  .s-content {
+    width: 70%;
+  }
+  .opisanie {
+    font-size: 12px;
+    line-height: 14px;
+    max-width: 90%;
+  }
+  .user-signup {
+    width: 75%;
+    margin-left: 11%;
+  }
+  .input {
+    height: 13%;
+    font-size: 25px;
+  }
+  .conditions {
+    font-size: 19px;
+  }
+  .justdiv {
+    margin-left: 3%;
+  }
+  .register-block {
+    height: 800px;
+  }
+  .r-btn {
+    margin-left: 55%;
+  }
+  .tarif {
+    height: 1600px;
+  }
+  .juust {
+    height: 420px;
+  }
+  /* BEKA */
+}
+/* BEKA */
+@media (max-width: 534px) {
+  .tarif {
+    height: 1500px;
+  }
+  .tabs {
+    max-width: 500px;
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .t-heading {
+    font-size: 30px;
+    padding-top: 25px;
+    height: 60px;
+  }
+  .tabs-button {
+    width: 130px;
+    height: 40px;
+    margin-right: 35px;
+    margin-left: 35px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  .tabs-content {
+    margin-top: 30px;
     flex-direction: column;
     align-items: center;
-}
-.first-content{
+  }
+  .first-content {
     margin-right: 0px;
-}
-.second-content{
+  }
+  .second-content {
     margin-right: 0px;
-}
-.salons-content {
-  width: 270px;
-  height: 380px;
-  margin-bottom: 25px;
-  border-radius: 35px;
-}
-.content-header {
-  font-size: 30px;
-  line-height: 45px;
-  margin-top: 25px;
-  margin-bottom: 17px;
-}
-.content-list {
-  margin-left: 7px;
-}
-.tabs-item {
-  font-size: 19px;
+  }
+  .salons-content {
+    width: 270px;
+    height: 400px;
+    margin-bottom: 40px;
+    border-radius: 35px;
+  }
+  .content-header {
+    font-size: 30px;
+  }
+  .content-list {
+    margin-left: 7px;
+  }
+  .tabs-item {
+    font-size: 19px;
     line-height: 18px;
-  margin-bottom: 23px;
+    margin-bottom: 23px;
+  }
+  .r-heading {
+    height: 10%;
+    font-size: 32px;
+  }
+  .tabs_item {
+    font-size: 28px;
+  }
+  .user-signup {
+    height: 90%;
+  }
+  .register-block {
+    height: 650px;
+  }
+  .screen {
+    height: 1650px;
+  }
+  .s-content {
+    width: 80%;
+  }
+  .conditions {
+    font-size: 17px;
+  }
+  .input {
+    font-size: 22px;
+  }
 }
+/* BEKA */
+@media (max-width: 490px) {
+  .plan {
+    height: 1750px;
+  }
+  .plan-title {
+    font-size: 40px;
+    line-height: 39px;
+  }
+  .group1 {
+    top: 1000px;
+    width: 70%;
+    height: 25%;
+  }
+  .group2 {
+    top: 600px;
+    width: 50%;
+    height: 15%;
+  }
+  .steps {
+    margin-bottom: 200px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .step {
+    height: 350px;
+  }
+  .step-content {
+    padding-top: 0;
+    width: 150px;
+    height: 200px;
+  }
+  .step-text {
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .advantages-container {
+    margin-top: 40px;
+  }
+  .advantages-item {
+    width: 150px;
+    height: 200px;
+  }
+  .advantages-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+  }
+  .advantages-title {
+    font-size: 18px;
+    margin-bottom: 0px;
+  }
+  .advantages-text {
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 250px;
+  }
+  /* 
+  .second-part {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .div {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  } */
+  .instagram {
+    height: 250px;
+  }
+  .i-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .i-text {
+    font-size: 18px;
+    line-height: 35px;
+    max-width: 350px;
+  }
+  .subscribe {
+    width: 250px;
+    height: 60px;
+    font-size: 25px;
+  }
+  /* BEKA */
+  .duration {
+    font-size: 16px;
+  }
+  .stoimost {
+    font-size: 16px;
+  }
+  .tarif {
+    height: 1400px;
+  }
+  .background {
+    height: 700px;
+  }
+  .t-heading {
+    font-size: 30px;
+    padding-top: 25px;
+    height: 60px;
+  }
+  .tabs-button {
+    width: 120px;
+    height: 35px;
+    margin-right: 50px;
+    margin-left: 50px;
+    cursor: pointer;
+    font-size: 23px;
+  }
+  .tabs-content {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .first-content {
+    margin-right: 0px;
+  }
+  .second-content {
+    margin-right: 0px;
+  }
+  .salons-content {
+    width: 250px;
+    height: 380px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+  }
+  .content-header {
+    font-size: 30px;
+  }
+  .content-list {
+    margin-left: 5px;
+  }
+  .tabs-item {
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 18px;
+  }
+  .contact-block {
+    height: 250px;
+  }
+  .c-heading {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .dma-email {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+  .contact-btn {
+    width: 150px;
+    height: 45px;
+    font-size: 25px;
+  }
+  .r-btn {
+    font-size: 23px;
+    margin-left: 26%;
+  }
+  .checkbox {
+    transform: scale(1.3);
+  }
+  .conditions {
+    font-size: 15px;
+  }
+  .input {
+    font-size: 19px;
+  }
+  .tabs-button {
+    height: 40px;
+  }
+  .juust {
+    height: 380px;
+  }
+  .tabs_item {
+    font-size: 25px;
+  }
+  .s-content {
+    width: 85%;
+  }
+  .screen {
+    height: 1600px;
+  }
+  /* BEKA */
 }
-@media(max-width:470px){
-    .tarif{
-        height: 1350px;
-    }
-    .background{
-        height: 700px;
-    }
-        .active {
-  width: 100px;
-  height: 25px;
+@media (max-width: 420px) {
+  .screen {
+    height: 1450px;
+  }
+  .opisanie {
+    font-size: 11px;
+    line-height: 13px;
+    max-width: 95%;
+  }
+  .smallimgs {
+    width: 40%;
+  }
+  .lefttop2 {
+    top: 500px;
+  }
+  .user-signup {
+    width: 85%;
+    margin-left: 5%;
+  }
+  .register-block {
+    height: 500px;
+  }
+  .toprightt {
+    width: 100%;
+  }
+
+  .c-heading {
+    font-size: 19px;
+  }
+  .dma-email {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+  .contact-block {
+    height: 200px;
+  }
+  .lefttopp {
+    width: 50px;
+  }
 }
-    .t-heading{
-        font-size: 30px;
-        padding-top: 25px;
-        height: 60px;
-    }
-.tabs-button {
+@media (max-width: 385px) {
+  .tabs-button {
+    font-size: 20px;
+  }
+  .s-content {
+    width: 90%;
+  }
+  .screen {
+    height: 1400px;
+  }
+}
+@media (max-width: 370px) {
+  .salons-content {
+    width: 220px;
+    height: 360px;
+    margin-bottom: 40px;
+    border-radius: 25px;
+  }
+  .first-content-part {
+    border-radius: 25px;
+    margin-bottom: 2%;
+  }
+  .content-header {
+    font-size: 27px;
+  }
+  .content-list {
+    margin-left: 1px;
+  }
+  .tabs-button {
+    height: 35px;
     width: 100px;
-    height: 25px;
-  margin-right: 50px;
-  margin-left: 50px;
-  text-align: center;
-    cursor: pointer;
+  }
+  .tabs-item {
+    font-size: 15px;
+    line-height: 21px;
+    margin-bottom: 13px;
+  }
+  .c-heading {
+    font-size: 17px;
+  }
+  .dma-email {
+    font-size: 20px;
+  }
+  .contact-btn {
+    font-size: 22px;
+  }
+  .r-heading {
     font-size: 25px;
-    padding-bottom: 15px;
+    font-weight: bold;
+  }
+  .tabs_item {
+    font-size: 22px;
+  }
+  .justdiv {
+    margin-left: 0;
+  }
+  .conditions {
+    font-size: 12.5px;
+  }
+  .r-btn {
+    font-size: 20px;
+  }
+  .screen {
+    height: 1350px;
+  }
+  .tabs-button {
+    width: 150px;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
 }
-.tabs-content {
-  margin-top: 20px;
-    flex-direction: column;
-    align-items: center;
-}
-.first-content{
-    margin-right: 0px;
-}
-.second-content{
-    margin-right: 0px;
-}
-.salons-content {
-  width: 250px;
-  height: 370px;
-  margin-bottom: 30px;
-  border-radius: 35px;
-}
-.content-header {
-  font-size: 30px;
-  line-height: 45px;
-  margin-top: 25px;
-  margin-bottom: 17px;
-}
-.content-list {
-  margin-left: 5px;
-}
-.tabs-item {
-  font-size: 18px;
-    line-height: 21px;
-  margin-bottom: 20px;
-}
-}
-
-@media(max-width:385px){
-    .tabs-button{
-        font-size: 20px;
-        padding-bottom: 7px
-    }
-   
-}
-@media(max-width:370px){
-    .salons-content {
-  width: 220px;
-  height: 350px;
-  margin-bottom: 40px;
-  border-radius: 30px;
-}
-.content-header {
-  font-size: 30px;
-  line-height: 45px;
-  margin-top: 25px;
-  margin-bottom: 17px;
-}
-.content-list {
-  margin-left: 1px;
-}
-.tabs-item {
-  font-size: 15px;
-    line-height: 21px;
-  margin-bottom: 15px;
-}
+@media (max-width: 320px) {
+  .tabs-button {
+    height: 30px;
+    width: 100px;
+    font-size: 15px;
+  }
+  .juust {
+    height: 280px;
+  }
+  .r-heading {
+    height: 7%;
+  }
+  .c-heading {
+    font-size: 15px;
+  }
+  .dma-email {
+    font-size: 18px;
+  }
+  .contact-btn {
+    width: 100px;
+    height: 35px;
+    font-size: 20px;
+  }
+  .contact-block {
+    height: 170px;
+  }
+  .lefttopp {
+    width: 40px;
+  }
+  .tabs-button {
+    font-size: 20px;
+    height: 35px;
+  }
+  .screen {
+    height: 1200px;
+  }
 }
