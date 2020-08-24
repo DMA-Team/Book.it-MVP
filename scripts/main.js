@@ -51,19 +51,19 @@ function slowScroll (id) {
     }, 500);
     return false;
   };
-  
+
   function countdown(dateEnd) {
     var timer, days, hours, minutes, seconds;
-  
+
     dateEnd = new Date(dateEnd);
     dateEnd = dateEnd.getTime();
-  
+
     if (isNaN(dateEnd)) {
       return;
     }
-  
+
     timer = setInterval(calculate, 1000);
-  
+
     function calculate() {
       var dateStart = new Date();
       var dateStart = new Date(
@@ -75,7 +75,7 @@ function slowScroll (id) {
         dateStart.getUTCSeconds()
       );
       var timeRemaining = parseInt((dateEnd - dateStart.getTime()) / 1000);
-  
+
       if (timeRemaining >= 0) {
         days = parseInt(timeRemaining / 86400);
         timeRemaining = timeRemaining % 86400;
@@ -84,7 +84,7 @@ function slowScroll (id) {
         minutes = parseInt(timeRemaining / 60);
         timeRemaining = timeRemaining % 60;
         seconds = parseInt(timeRemaining);
-  
+
         document.getElementById("days").innerHTML = parseInt(days, 10);
         document.getElementById("hours").innerHTML = ("0" + hours).slice(-2);
         document.getElementById("minutes").innerHTML = ("0" + minutes).slice(-2);
@@ -93,11 +93,45 @@ function slowScroll (id) {
         return;
       }
     }
-  
+
     function display(days, hours, minutes, seconds) {}
   }
-  
+
   countdown("11/01/2020 00:00:00 AM");
- 
+  var gamb = document.querySelector('.gamb');
+var minMenu = document.querySelector('.min-menu');
+  var arrow = document.querySelector('.min-menu img');
+  gamb.onclick = function () {
+      minMenu.classList.add('show');
+      gamb.classList.add('delete');
+      arrow.classList.add('show');
+  }
+  arrow.onclick = function () {
+      minMenu.classList.remove('show');
+      gamb.classList.remove('delete');
+      arrow.classList.remove('show');
+  };
 
+  
+  
+ const registerBtn = document.querySelector(".r-btn");
+const userSignup = document.querySelector(".user-signup1");
 
+registerBtn.addEventListener("click", () => {
+  userSignup.classList.remove("hide");
+});
+
+userSignup.addEventListener("click", (event) => {
+  const target = event.target;
+
+  if (target.classList.contains("modal-close") || target === userSignup) {
+    userSignup.classList.add("hide");
+  }
+});
+
+var modal = document.querySelector(".user-signup1");
+window.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    userSignup.classList.add("hide");
+  }
+});
