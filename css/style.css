@@ -15,36 +15,6 @@ button {
   cursor: pointer;
 }
 
-
-
-.user-signup1 {
-  z-index: 1000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 170, 255, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.modal-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: transparent;
-  border-color: transparent;
-font-size: 25px;
-    cursor: pointer;
-    z-index: 1000;
-}
-.i-window{
-    position: relative;
-}
-
-
-
 header .menu {
   height: 100px;
   display: flex;
@@ -2663,8 +2633,16 @@ body {
     height: 1200px;
   }
 }
+
+.gamb{
+  margin-top: 25px;
+  margin-left: 25px;
+  cursor: pointer;
+  position: fixed;
+}
 .min-menu{
-  position: absolute;
+  top: 0;
+  bottom: 0;
   left: -93px;
   visibility: hidden;
   width: 555px;
@@ -2673,10 +2651,11 @@ body {
   background-color: white;
   z-index: 15;
   border-radius: 56px;
-  top: 0;
 }
 .min-menu .links-min{
   margin-left: 123px;
+  height: 100%;
+  overflow-y: scroll;
 }
 .min-menu .arrow{
   margin-left: 123px;
@@ -2695,34 +2674,139 @@ body {
 .gamb{
   visibility: hidden;
 }
-@media (max-width: 750px) {
+.min{
+  visibility: hidden;
+}
+@media (max-width: 1400px) {
+  .Ellipse-1{
+    left: 0!important;
+    width: 250px;
+    height: 250px;
+  }
+  .point-2{
+    left: 150px!important;
+    margin-top: -160px!important;
+    width: 125px;
+    height: 75px;
+  }
+  .menu{
+    background-color: white!important;
+    border-bottom: 0!important;
+  }
+  .gamb{
+    visibility: visible;
+    cursor: pointer;
+  }
+  .links{
+    visibility: hidden;
+  }
+  .main-h img{
+    width: 700px;
+    height: 600px;
+    margin-left: 100px;
+  }
+  .main-h h1{
+    width: 400px!important;
+    font-size: 30px!important;
+  }
+  .point-1{
+    width: 300px!important;
+    height: 150px!important;
+    padding-left: 0!important;
+  }
+  .min{
+    visibility: visible;
+  }
+  .el-h{
+    position: absolute;
+    top: 0;
+    left: 75%;
+  }
+  .el-h-2{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  header button{
+    background: #FFFFFF!important;
+    color: #373737!important;
+    border-radius: 26.5px!important;
+    z-index: 3;
+    position: absolute;
+    top: -20px;
+    right: 3%;
+  }
+  .fixed{
+    position: absolute!important;
+  }
+  .aim{
+    width: 341px!important;
+    height: 404px!important;
+  }
+  .ellipse{
+    margin-left: 70%!important;
+  }
+  .reasons{
+    grid-gap: 40px 40px!important;
+  }
+  .aim{
+    width: 307px!important;
+    height: 355px!important;
+    margin-left: 18px!important;
+  }
+  .aim article{
+    font-size: 25px!important;
+    width: 300px!important;
+    margin-left: 5px!important;
+  }
+}
+.show{
+  visibility: visible;
+}
+.arrow{
+  cursor: pointer;
+  margin-top: 35px;
+}
+.min-menu{
+  position: fixed;
+}
+@media (max-width: 1000px) {
+  .links-min{
+    overflow-y: scroll!important;
+  }
+  .plan{
+    height: 2197px;
+  }
+  .fixed{
+    position: absolute!important;
+  }
 .links{
   visibility: hidden;
 }
+
 .gamb{
   visibility: visible;
-  margin-top: 25px;
-  margin-left: 25px;
-  cursor: pointer;
+
 }
+
 header button{
   margin-left: 50%!important;
 }
 header{
   height: 341px;
 }
-.main-h img{
-  width: 220px;
-height: 195.41px;
-  margin-top: 0;
-
+.main-h img:first-of-type{
+  width: 220px!important;
+height: 195.41px!important;
+  margin-top: 0!important;
+  margin-left: 0px!important;
 }
 .main-h h1{
   width: 304px!important;
   font-size: 24px!important;
   line-height: 33px!important;
   grid-column: 2;
-  margin-top: -50px;
+  margin-top: -50px!important;
 }
 .main-h{
   grid-template-columns: 220px 305px!important;
@@ -2740,13 +2824,8 @@ height: 195.41px;
 .delete{
   visibility: hidden;
 }
-.show{
-  visibility: visible;
-}
-.arrow{
-  cursor: pointer;
-  margin-top: 35px;
-}
+
+
 .Ellipse-1{
   width: 152px;
   height: 154px;
@@ -2764,7 +2843,7 @@ height: 195.41px;
 .point-2{
   width: 82.84px;
   height: 51.01px;
-  margin-left: -200px;
+  margin-left: -50px;
   margin-top: 20px!important;
 }
 .block-1 h1{
@@ -2787,6 +2866,7 @@ height: 195.41px;
 .aim article{
   font-size: 20px!important;
   line-height: 27px!important;
+  margin-left: 15px!important;
 }
 .point-3{
   width: 82.83px;
@@ -2796,6 +2876,9 @@ height: 195.41px;
 }
 .aim:first-of-type article{
   width: 195px!important;
+}
+.make-up{
+  margin-left: 10%!important;
 }
 .aim:last-of-type article{
   width: 173px!important;
@@ -2812,9 +2895,10 @@ height: 195.41px;
   height: 40px!important;
   margin-left: 150px!important;
 }
-.menu{
-  background-color: white!important;
-  border-bottom: 0!important;
+.el-h{
+  position: absolute;
+  top: 0;
+  left: 65%!important;
 }
 .block-3{
   height: 772px!important;
@@ -2858,7 +2942,7 @@ height: 195.41px;
   width: 31px;
   height: 31px;
 }
-.salonnn{
+.salon-img{
   width: 33px;
   height: 33px;
 }
@@ -2875,7 +2959,119 @@ height: 195.41px;
 .right-p{
   margin-top: -450px!important;
 }
-.min-menu{
-  position: fixed;
+
+}
+@media (max-width: 500px) {
+  .main-h h1 {
+    width: 220px!important;
+    font-size: 20px!important;
+    line-height: 33px!important;
+    grid-column: 2;
+    margin-top: -50px!important;
+}
+  .el-h{
+    left: 35%!important
+  }
+  .main-h img:first-of-type{
+    width: 140px!important;
+    height: 125.41px!important;
+    margin-left: 100px!important;
+  }
+  header button{
+    width: 183px!important;
+    height: 34.5px!important;
+    margin-top: 15%!important;
+  }
+  .min-menu{
+    width: 380px!important;
+    height: 800px!important;
+  }
+  .min-menu a{
+    font-size: 22px!important;
+  }
+
+  .aim article{
+    font-size: 15px!important;
+    width: 10px!important;
+  }
+  .Ellipse-1{
+    width: 100px;
+    height: 103px;
+  }
+  .point-2{
+    width: 70px;
+    height: 45px;
+    margin-left: -120px;
+  }
+  .block-1 h1{
+    font-size: 20px!important;
+    line-height: 29px!important;
+    margin-left: 5%;
+  }
+  .block-1{
+    height: 1000px!important;
+  }
+  .aims{
+    display: grid!important;
+    grid-template-columns: 150px!important;
+    grid-template-rows: 175px 175px 175px!important;
+    grid-row-gap: 100px;
+    left: 40%!important;
+  }
+  .Ellipse-2{
+    margin-top: 900px!important;
+  }
+  .reason{
+    width: 102px!important;
+    height: 85px!important;
+  }
+  .reasons{
+    grid-template-columns: 102px 102px!important;
+    grid-template-rows: 85px 85px 85px!important;
+  }
+  .plan{
+    height: 3000px;
+  }
+  .in{
+    width: 22px;
+    height: 22px;
+  }
+  .rocket{
+    width: 16px;
+    height: 16px;
+  }
+  .analytics {
+    width: 16px;
+    height: 18px;
+}
+  .calendar {
+  width: 17px;
+  height: 17px;
+}
+.speak {
+  width: 16px;
+  height: 16px;
+}
+.salon-img {
+    width: 17px;
+    height: 17px;
+}
+.reason article {
+    width: 100px!important;
+    font-size: 7px!important;
+    line-height: 10px!important;
+    padding-left: 7px!important;
+}
+.block-3{
+  height: 600px!important;
+}
+.block-3 p{
+  font-size: 70px!important;
+}
+.left-p{
+  margin-top: 220px!important;
+}
+.right-p{
+  margin-top: -400px!important;
 }
 }
