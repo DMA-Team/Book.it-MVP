@@ -678,6 +678,45 @@ body {
   flex-basis: 70%;
   align-items: center;
   margin-bottom: 50px;
+  transition: 1s;
+}
+
+#Macbook.when_item_hover {
+  display: none;
+}
+#MacbookCRM.when_CRM_hover {
+  display: block;
+}
+#MacbookПоддержка.when_Поддержка_hover {
+  display: block;
+}
+#MacbookОтчеты.when_Отчеты_hover {
+  display: block;
+}
+#MacbookПоток.when_Поток_hover {
+  display: block;
+}
+#MacbookЧат.when_Чат_hover {
+  display: block;
+}
+
+#Macbook {
+  display: block;
+}
+#MacbookCRM {
+  display: none;
+}
+#MacbookПоддержка {
+  display: none;
+}
+#MacbookОтчеты {
+  display: none;
+}
+#MacbookПоток {
+  display: none;
+}
+#MacbookЧат {
+  display: none;
 }
 .first-part {
   display: flex;
@@ -1445,7 +1484,7 @@ body {
   }
   .ellipse2 {
     width: 23%;
-}
+  }
   /* ABA */
 }
 /* BEKA */
@@ -2319,7 +2358,7 @@ body {
 /* BEKA */
 @media (max-width: 490px) {
   .plan {
-    height: 1750px;
+    height: 2500px;
   }
   .plan-title {
     font-size: 40px;
@@ -2336,7 +2375,7 @@ body {
     height: 15%;
   }
   .steps {
-    margin-bottom: 200px;
+    margin-bottom: 900px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -2792,9 +2831,6 @@ body {
   .links-min {
     overflow-y: scroll !important;
   }
-  .plan {
-    height: 2197px;
-  }
   .fixed {
     position: absolute !important;
   }
@@ -3043,9 +3079,6 @@ body {
   .reasons {
     grid-template-columns: 102px 102px !important;
     grid-template-rows: 85px 85px 85px !important;
-  }
-  .plan {
-    height: 3000px;
   }
   .in {
     width: 22px;

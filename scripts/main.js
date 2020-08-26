@@ -110,3 +110,69 @@ gamb.onclick = () => {
       gamb.classList.remove('delete');
       arrow.classList.remove('show');
   }
+
+  
+  $(function () {
+    $("#CRM").hover(
+      function () {
+        $("#MacbookCRM").addClass("when_CRM_hover");
+        $("#Macbook").addClass("when_item_hover");
+      },
+      function () {
+        $("#MacbookCRM").removeClass("when_CRM_hover");
+        $("#Macbook").removeClass("when_item_hover");
+      }
+    );
+  });
+
+  $(function () {
+    $("#Поддержка").hover(
+      function () {
+        $("#MacbookПоддержка").addClass("when_Поддержка_hover");
+        $("#Macbook").addClass("when_item_hover");
+      },
+      function () {
+        $("#MacbookПоддержка").removeClass("when_Поддержка_hover");
+        $("#Macbook").removeClass("when_item_hover");
+      }
+    );
+  });
+
+  $(function () {
+    $("#Отчеты").hover(
+      function () {
+        $("#MacbookОтчеты").addClass("when_Отчеты_hover");
+        $("#Macbook").addClass("when_item_hover");
+      },
+      function () {
+        $("#MacbookОтчеты").removeClass("when_Отчеты_hover");
+        $("#Macbook").removeClass("when_item_hover");
+      }
+    );
+  });
+
+  $(function () {
+    $("#Поток").hover(
+      function () {
+        $("#MacbookПоток").addClass("when_Поток_hover");
+        $("#Macbook").addClass("when_item_hover");
+      },
+      function () {
+        $("#MacbookПоток").removeClass("when_Поток_hover");
+        $("#Macbook").removeClass("when_item_hover");
+      }
+    );
+  });
+
+  $(function () {
+    $("#Чат").hover(
+      function () {
+        $("#MacbookЧат").addClass("when_Чат_hover");
+        $("#Macbook").addClass("when_item_hover");
+      },
+      function () {
+        $("#MacbookЧат").removeClass("when_Чат_hover");
+        $("#Macbook").removeClass("when_item_hover");
+      }
+    );
+  });
