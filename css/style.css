@@ -2719,7 +2719,7 @@ body {
 }
 .link-min {
   display: flex;
-  height: 65px;
+  height: 50px;
 }
 .min-menu a {
   font-weight: 300;
