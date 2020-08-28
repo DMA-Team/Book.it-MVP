@@ -118,9 +118,36 @@ function render() {
 function phoneAuth() {
   //get the number
   var number = document.getElementById("phone_number").value;
-  //phone number authentication function of firebase
-  //it takes two parameter first one is number,,,second one is recaptcha
-  firebase
+    var pbool=0;
+    const divlist = document.querySelector(".divlist");
+  var modaltel = document.querySelector(".modal-tel").value;
+   db.collection("salons").onSnapshot(function(querySnapshot) {
+      querySnapshot.forEach(function(doc) {
+        var firebasenumber=doc.data().phone_number;
+          if(modaltel===firebasenumber)
+          {
+            pbool=pbool+1;
+          }
+        else
+        {
+        pbool=0;
+        };
+           if(pbool==1){
+              divlist.innerHTML+="<input type='checkbox' id='list_i' checked>";
+  }
+          else{
+
+          }
+        });
+    }); 
+    function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+    var main = async () => {
+ await delay(900);
+    var list = document.getElementById("list_i");
+    if(!list){
+           firebase
     .auth()
     .signInWithPhoneNumber(number, window.recaptchaVerifier)
     .then(function (confirmationResult) {
@@ -133,6 +160,16 @@ function phoneAuth() {
     .catch(function (error) {
       alert(error.message);
     });
+        } else
+        {
+            alert("Пользователь с таким номером телефона уже существует");
+        list.parentNode.removeChild(list);
+          
+        };
+}
+
+main();
+ 
 }
 
 function codeverify() {
