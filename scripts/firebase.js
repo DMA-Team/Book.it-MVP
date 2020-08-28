@@ -1,7 +1,6 @@
 const database = firebase.firestore();
 database.settings({ timestampsInSnapshots: true });
 
-
 const form = document.getElementById("add-salon");
 const masterForm = document.querySelector(".master");
 const phoneform = document.getElementById("phone_form");
