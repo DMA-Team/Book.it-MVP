@@ -58,7 +58,7 @@ masterForm.addEventListener("submit", (o) => {
    database.collection("masters").onSnapshot(function(querySnapshot) {
       querySnapshot.forEach(function(doc) {
         var masterEmail=doc.data().email;
-          if(sEmail===masterEmail)
+          if(mEmail===masterEmail)
           {
             booll=booll+1;
           }
