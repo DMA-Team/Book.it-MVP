@@ -3164,3 +3164,42 @@ body {
     margin-top: -400px !important;
   }
 }
+.modal__block input{
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+}
+.modal-tel placeholder{
+  font-size: 20px;
+}
+.modal__block h3{
+  margin-top: 50px;
+}
+.verification input{
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+  margin-left: 19%;
+}
+.verification button{
+  width: 224px;
+  height: 46px;
+  background-color: #6b62fd;
+  font-size: 18px;
+  line-height: 35px;
+  color: white;
+  margin-top: 30px;
+  margin-left: 60px;
+  margin-left: 30%;
+}
+.phone_form button{
+  width: 224px;
+  height: 46px;
+  background-color: #6b62fd;
+  font-size: 18px;
+  line-height: 35px;
+  color: white;
+  margin-top: 30px;
+  margin-left: 60px;
+  margin-left: 15%;
+}

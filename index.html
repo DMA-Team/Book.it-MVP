@@ -767,6 +767,7 @@ maximum-scale=1.0, user-scalable=no"
               id="phone_number"
               name="phone_number"
               placeholder="+7 *** *** ** **"
+              class="modal-tel"
             />
             <div id="recaptcha-container"></div>
             <button
@@ -778,7 +779,7 @@ maximum-scale=1.0, user-scalable=no"
             </button>
           </form>
           <h3>Введите код</h3>
-          <form>
+          <form class="verification">
             <input type="text" id="verificationCode" />
             <button type="button" onclick="codeverify();">
               Зарегистрироваться
