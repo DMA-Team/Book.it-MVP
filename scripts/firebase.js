@@ -55,7 +55,7 @@ masterForm.addEventListener("submit", (o) => {
    var booll=0;
     const listdiv = document.querySelector(".listdiv");
     var mEmail = document.querySelector(".m-email").value;
-   db.collection("masters").onSnapshot(function(querySnapshot) {
+   database.collection("masters").onSnapshot(function(querySnapshot) {
       querySnapshot.forEach(function(doc) {
         var masterEmail=doc.data().email;
           if(sEmail===masterEmail)
