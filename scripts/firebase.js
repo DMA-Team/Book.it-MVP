@@ -118,6 +118,7 @@ function render() {
 function phoneAuth() {
   //get the number
   var number = document.getElementById("phone_number").value;
+  if (masterForm.classList.contains("hide")){
     var pbool=0;
     const divlist = document.querySelector(".divlist");
   var modaltel = document.querySelector(".modal-tel").value;
@@ -169,7 +170,60 @@ function phoneAuth() {
 }
 
 main();
- 
+  }
+  else{
+      var pbool=0;
+    const divlist = document.querySelector(".divlist");
+  var modaltel = document.querySelector(".modal-tel").value;
+   database.collection("masters").onSnapshot(function(querySnapshot) {
+      querySnapshot.forEach(function(doc) {
+        var firebasenumber=doc.data().phone_number;
+          if(modaltel===firebasenumber)
+          {
+            pbool=pbool+1;
+          }
+        else
+        {
+        pbool=0;
+        };
+           if(pbool==1){
+              divlist.innerHTML+="<input type='checkbox' style='display:none' id='list_i' checked>";
+  }
+          else{
+
+          }
+        });
+    }); 
+    function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+    var main = async () => {
+ await delay(900);
+    var list = document.getElementById("list_i");
+    if(!list){
+           firebase
+    .auth()
+    .signInWithPhoneNumber(number, window.recaptchaVerifier)
+    .then(function (confirmationResult) {
+      //s is in lowercase
+      window.confirmationResult = confirmationResult;
+      coderesult = confirmationResult;
+      console.log(coderesult);
+      alert("Код отправлен");
+    })
+    .catch(function (error) {
+      alert(error.message);
+    });
+        } else
+        {
+            alert("Пользователь с таким номером телефона уже существует");
+        list.parentNode.removeChild(list);
+          
+        };
+}
+
+main();
+  }
 }
 
 function codeverify() {
