@@ -12,7 +12,7 @@ form.addEventListener("submit", (e) => {
   var bool=0;
     const listdiv = document.querySelector(".listdiv");
   var sEmail = document.querySelector(".s-email").value;
-   db.collection("salons").onSnapshot(function(querySnapshot) {
+   database.collection("salons").onSnapshot(function(querySnapshot) {
       querySnapshot.forEach(function(doc) {
         var firebaseEmail=doc.data().email;
           if(sEmail===firebaseEmail)
