@@ -133,7 +133,7 @@ function phoneAuth() {
         pbool=0;
         };
            if(pbool==1){
-              divlist.innerHTML+="<input type='checkbox' id='list_i' checked>";
+              divlist.innerHTML+="<input type='checkbox' style='display:none' id='list_i' checked>";
   }
           else{
 
