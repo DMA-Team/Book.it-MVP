@@ -121,7 +121,7 @@ function phoneAuth() {
     var pbool=0;
     const divlist = document.querySelector(".divlist");
   var modaltel = document.querySelector(".modal-tel").value;
-   db.collection("salons").onSnapshot(function(querySnapshot) {
+   database.collection("salons").onSnapshot(function(querySnapshot) {
       querySnapshot.forEach(function(doc) {
         var firebasenumber=doc.data().phone_number;
           if(modaltel===firebasenumber)
