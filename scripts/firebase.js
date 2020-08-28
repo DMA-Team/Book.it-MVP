@@ -9,42 +9,87 @@ const userSignup = document.querySelector(".user-signup1");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  var bool=0;
+    const listdiv = document.querySelector(".listdiv");
   var sEmail = document.querySelector(".s-email").value;
-  let x = false;
-  database.collection("salons")
-    .get()
-    .then((snapshot) => {
-      snapshot.docs.forEach((doc) => {
-        var firestoreEmail = doc.data().email;
-        if (firestoreEmail == sEmail.value) {
-          x = true;
-        }
-      });
-    });
-  if (x == true) {
-    alert("Пользователь с такой почтой уже существует");
-  } else {
-    userSignup.classList.remove("hide");
+   db.collection("salons").onSnapshot(function(querySnapshot) {
+      querySnapshot.forEach(function(doc) {
+        var firebaseEmail=doc.data().email;
+          if(sEmail===firebaseEmail)
+          {
+            bool=bool+1;
+          }
+        else
+        {
+        bool=0;
+        };
+           if(bool==1){
+              listdiv.innerHTML+="<input type='checkbox' id='list_item' checked>";
   }
+          else{
+
+          }
+        });
+    }); 
+    function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+    var main = async () => {
+ await delay(900);
+    var listitem = document.getElementById("list_item");
+    if(!listitem){
+          userSignup.classList.remove("hide");
+        } else
+        {
+            alert("Пользователь с такой почтой уже существует");
+        listitem.parentNode.removeChild(listitem);
+          
+        };
+}
+
+main();
+    
 });
 masterForm.addEventListener("submit", (o) => {
-  var mEmail = document.querySelector(".m-email").value;
-  let x = false;
-  database.collection("masters")
-    .get()
-    .then((snapshot) => {
-      snapshot.docs.forEach((doc) => {
-        var firestoreMEmail = doc.data().email;
-        if (firestoreMEmail.value == mEmail.value) {
-          x = true;
-        }
-      });
-    });
-  if (x == true) {
-    alert("Пользователь с такой почтой уже существует");
-  } else {
-    userSignup.classList.remove("hide");
+
+   var booll=0;
+    const listdiv = document.querySelector(".listdiv");
+    var mEmail = document.querySelector(".m-email").value;
+   db.collection("masters").onSnapshot(function(querySnapshot) {
+      querySnapshot.forEach(function(doc) {
+        var masterEmail=doc.data().email;
+          if(sEmail===masterEmail)
+          {
+            booll=booll+1;
+          }
+        else
+        {
+        booll=0;
+        };
+           if(booll==1){
+              listdiv.innerHTML+="<input type='checkbox' id='list_item' checked>";
   }
+          else{
+
+          }
+        });
+    }); 
+    function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+    var main = async () => {
+ await delay(900);
+    var listitem = document.getElementById("list_item");
+    if(!listitem){
+          userSignup.classList.remove("hide");
+        } else
+        {
+            alert("Пользователь с такой почтой уже существует");
+        listitem.parentNode.removeChild(listitem);
+        };
+}
+
+main();
   o.preventDefault();
 });
 
