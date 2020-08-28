@@ -18,7 +18,7 @@ maximum-scale=1.0, user-scalable=no"
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/aos.css">
   </head>
   <body>
     <header id="main">
@@ -85,16 +85,16 @@ maximum-scale=1.0, user-scalable=no"
             <a
               href="javascript://0"
               onclick="slowScroll('#main')"
-              style="margin-left: 33px;"
+              style="margin-left: 33px"
               >Главная</a
             >
           </div>
           <div class="link-min">
-            <img src="img/id.png" width="45px" height="45px;"/>
+            <img src="img/id.png" width="45px" height="45px;" />
             <a
               href="javascript://0"
               onclick="slowScroll('#registrate')"
-              style="margin-left: 21px;"
+              style="margin-left: 21px"
               >Регистрация</a
             >
           </div>
@@ -103,7 +103,7 @@ maximum-scale=1.0, user-scalable=no"
             <a
               href="javascript://0"
               onclick="slowScroll('#aims')"
-              style="margin-left: 24px;"
+              style="margin-left: 24px"
               >Наши цели</a
             >
           </div>
@@ -112,7 +112,7 @@ maximum-scale=1.0, user-scalable=no"
             <a
               href="javascript://0"
               onclick="slowScroll('#start')"
-              style="margin-left: 27px;"
+              style="margin-left: 27px"
               >Как начать?</a
             >
           </div>
@@ -121,7 +121,7 @@ maximum-scale=1.0, user-scalable=no"
             <a
               href="javascript://0"
               onclick="slowScroll('#pros')"
-              style="margin-left: 31px;"
+              style="margin-left: 31px"
               >Преимущества</a
             >
           </div>
@@ -130,7 +130,7 @@ maximum-scale=1.0, user-scalable=no"
             <a
               href="javascript://0"
               onclick="slowScroll('#why')"
-              style="margin-left: 27px;"
+              style="margin-left: 27px"
               >Почему мы?</a
             >
           </div>
@@ -139,7 +139,7 @@ maximum-scale=1.0, user-scalable=no"
             <a
               href="javascript://0"
               onclick="slowScroll('#app')"
-              style="margin-left: 22px;"
+              style="margin-left: 22px"
               >Приложение</a
             >
           </div>
@@ -148,7 +148,7 @@ maximum-scale=1.0, user-scalable=no"
             <a
               href="javascript://0"
               onclick="slowScroll('#tarif')"
-              style="margin-left: 20px;"
+              style="margin-left: 20px"
               >Цены</a
             >
           </div>
@@ -157,7 +157,7 @@ maximum-scale=1.0, user-scalable=no"
             <a
               href="javascript://0"
               onclick="slowScroll('#contacts')"
-              style="margin-left: 23px;"
+              style="margin-left: 23px"
               >Мы в соцсетях</a
             >
           </div>
@@ -654,28 +654,28 @@ maximum-scale=1.0, user-scalable=no"
           <input
             type="text"
             placeholder="Имя и фамилия"
-            name="full_name"
+            id="full_name"
             class="input"
             required
           /><br />
           <input
             type="text"
             placeholder="Название салона"
-            name="salonname"
+            id="salonname"
             class="input"
             required
           /><br />
           <input
             type="email"
             placeholder="E-mail"
-            name="email"
-            class="input"
+            id="email"
+            class="input s-email"
             required
           /><br />
           <input
             type="password"
             placeholder="Пароль"
-            name="password"
+            id="password"
             class="input"
             required
           /><br />
@@ -708,26 +708,26 @@ maximum-scale=1.0, user-scalable=no"
           <input
             type="text"
             placeholder="Имя и фамилия"
-            name="full_name"
+            id="full_name"
             class="input"
           /><br />
           <input
             type="text"
             placeholder="Название салона (не обязательно)"
-            name="salonname"
+            id="salonname"
             class="input"
           /><br />
           <input
             type="email"
             placeholder="E-mail"
-            name="email"
-            class="input"
+            id="email"
+            class="input m-email"
             required
           /><br />
           <input
             type="password"
             placeholder="Пароль"
-            name="password"
+            id="password"
             class="input"
             required
           /><br />
@@ -758,8 +758,32 @@ maximum-scale=1.0, user-scalable=no"
         </form>
       </div>
       <div class="user-signup1 hide">
-        <div class="i-window" id="firebaseui-auth-container">
+        <div class="modal__block">
+          <h3>Введите номер телефона, чтобы создать аккаунт</h3>
           <button class="modal-close">&#10008;</button>
+          <form class="phone_form" id="phone_form" onsubmit="return false">
+            <input
+              type="tel"
+              id="phone_number"
+              name="phone_number"
+              placeholder="+7 *** *** ** **"
+            />
+            <div id="recaptcha-container"></div>
+            <button
+              class="submit-btn"
+              onclick="phoneAuth();"
+              onsubmit="return false"
+            >
+              Отправить код
+            </button>
+          </form>
+          <h3>Введите код</h3>
+          <form>
+            <input type="text" id="verificationCode" />
+            <button type="button" onclick="codeverify();">
+              Зарегистрироваться
+            </button>
+          </form>
         </div>
       </div>
     </section>
@@ -838,94 +862,8 @@ maximum-scale=1.0, user-scalable=no"
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
 
-      const db = firebase.firestore();
       const auth = firebase.auth();
-      db.settings({ timestampsInSnapshots: true });
     </script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth__ru.js"></script>
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css"
-    />
-
-    <script type="text/javascript">
-      // FirebaseUI config.
-      var uiConfig = {
-        signInSuccessUrl: "<https://www.bookit-business.kz/>",
-        signInOptions: [
-          // Leave the lines as is for the providers you want to offer your users.
-          firebase.auth.PhoneAuthProvider.PROVIDER_ID,
-        ],
-        // tosUrl and privacyPolicyUrl accept either url string or a callback
-        // function.
-        // Terms of service url/callback.
-        tosUrl: "<your-tos-url>",
-        // Privacy policy url/callback.
-        privacyPolicyUrl: function () {
-          window.location.assign("<your-privacy-policy-url>");
-        },
-      };
-
-      // Initialize the FirebaseUI Widget using Firebase.
-      var ui = new firebaseui.auth.AuthUI(firebase.auth());
-      // The start method will wait until the DOM is loaded.
-      ui.start("#firebaseui-auth-container", {
-        signInOptions: [
-          {
-            provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
-
-            whitelistedCountries: ["KZ", "+7"],
-          },
-        ],
-      });
-
-      window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
-        ".submit",
-        {
-          size: "invisible",
-          callback: function (response) {
-            // reCAPTCHA solved, allow signInWithPhoneNumber.
-            onSignInSubmit();
-          },
-        }
-      );
-
-      var phoneNumber = getPhoneNumberFromUserInput();
-      var appVerifier = window.recaptchaVerifier;
-      firebase
-        .auth()
-        .signInWithPhoneNumber(phoneNumber, appVerifier)
-        .then(function (confirmationResult) {
-          // SMS sent. Prompt user to type the code from the message, then sign the
-          // user in with confirmationResult.confirm(code).
-          window.confirmationResult = confirmationResult;
-        })
-        .catch(function (error) {
-          // Error; SMS not sent
-          // ...
-        });
-      grecaptcha.reset(window.recaptchaWidgetId);
-
-      // Or, if you haven't stored the widget ID:
-      window.recaptchaVerifier.render().then(function (widgetId) {
-        grecaptcha.reset(widgetId);
-      });
-
-      var code = getCodeFromUserInput();
-      confirmationResult
-        .confirm(code)
-        .then(function (result) {
-          // User signed in successfully.
-          var user = result.user;
-          // ...
-        })
-        .catch(function (error) {
-          // User couldn't sign in (bad verification code?)
-          // ...
-        });
-    </script>
-
     <script src="scripts/firebase.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
