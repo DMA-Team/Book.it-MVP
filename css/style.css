@@ -47,12 +47,12 @@ button {
 }
 
 header .menu {
-  height: 100px;
+  height: 70px;
   display: flex;
   width: 100%;
-  border-bottom: 1px solid #a1a1a1;
   background-color: #f7f7f7;
 }
+
 @keyframes showElement {
   0% {
     opacity: 0;
@@ -79,24 +79,24 @@ header .menu.closed {
 header .menu .links {
   left: 50%;
   transform: translate(-50%);
-  height: 50px;
+  height: 30px;
   display: flex;
   position: absolute;
   left: 31%;
 }
 header .menu .links .link {
-  height: 100px;
+  height: 50px;
   display: inline-block;
 }
 header .menu .links .link a {
   display: inline-block;
   text-decoration: none;
   font-family: Nunito;
-  font-size: 16px;
-  line-height: 75px;
+  font-size: 20px;
+  line-height: 50px;
   margin-left: 34px;
-  padding-top: 20px;
-  height: 78px;
+  padding-top: 10px;
+  height: 40px;
   color: black;
 }
 header .menu .links .link a:hover {
@@ -109,15 +109,20 @@ header .menu button {
   font-size: 18px;
   line-height: 35px;
   color: white;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-left: 60px;
   margin-left: 80%;
+}
+@media (max-width:1600px) {
+  .menu a{
+    font-size: 16px!important;
+  }
 }
 header .menu.fixed {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 10px 0;
+  padding: 0 0;
   animation: showElement;
   animation-duration: 1s;
   z-index: 10;
@@ -3179,7 +3184,11 @@ body {
   width: 300px;
   height: 50px;
   font-size: 20px;
-  margin-left: 19%;
+}
+.verification{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 .verification button{
   width: 224px;
@@ -3190,7 +3199,6 @@ body {
   color: white;
   margin-top: 30px;
   margin-left: 60px;
-  margin-left: 30%;
 }
 .phone_form button{
   width: 224px;
@@ -3201,5 +3209,43 @@ body {
   color: white;
   margin-top: 30px;
   margin-left: 60px;
-  margin-left: 15%;
+}
+@media (max-width: 1100px) {
+
+  .modal__block{
+    width: 40%!important;
+  }
+}
+@media (max-width: 1000px) {
+  .modal__block{
+    width: 40%!important;
+  }
+}
+@media (max-width: 800px) {
+  .modal__block{
+    width: 60%!important;
+  }
+}
+@media (max-width: 570px) {
+  .modal__block{
+    width: 80%!important;
+  }
+}
+@media (max-width: 400px) {
+  .modal__block{
+    width: 100%!important;
+  }
+  .verification input{
+    width: 250px;
+  }
+  .modal__block input{
+    width: 250px;
+  }
+  .verification{
+    flex-direction: column;
+    align-items: center;
+  }
+  .modal__block button{
+    margin-left: 20px!important;
+  }
 }
