@@ -847,6 +847,7 @@ body {
   margin-bottom: 30px;
 }
 .i-text {
+  z-index: 0;
   font-weight: 600;
   font-size: 30px;
   line-height: 52px;
@@ -858,6 +859,7 @@ body {
   margin-bottom: 30px;
 }
 .subscribe {
+  z-index: 0;
   width: 387px;
   height: 109px;
   background: #ffffff;
@@ -1589,6 +1591,11 @@ body {
   }
   /* BEKA */
 }
+@media (max-width: 1150px) {
+  .first-part {
+    flex-basis: 20%;
+  }
+}
 @media (max-width: 1050px) {
   .plan {
     height: 1700px;
@@ -1611,6 +1618,9 @@ body {
   }
   .advantages-container {
     margin-top: 80px;
+  }
+  .macbook {
+    width: 700px;
   }
   .advantages-item {
     width: 200px;
@@ -2628,8 +2638,18 @@ body {
   .screen {
     height: 1400px;
   }
+  .plan {
+    height: 3200px;
+  }
 }
 @media (max-width: 370px) {
+  .second-part {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   .salons-content {
     width: 220px;
     height: 360px;
@@ -2687,6 +2707,12 @@ body {
     width: 150px;
     margin-right: 30px;
     margin-left: 30px;
+  }
+  .group3 {
+    left: 2%;
+    top: 50%;
+    width: 17%;
+    height: 34%;
   }
 }
 @media (max-width: 320px) {
@@ -3074,8 +3100,8 @@ body {
     height: 800px !important;
   }
   .min-menu a {
-    font-size: 16px!important;
-    margin-top: -10px!important;
+    font-size: 16px !important;
+    margin-top: -10px !important;
   }
 
   .aim article {
@@ -3106,11 +3132,11 @@ body {
     grid-row-gap: 100px;
     left: 40% !important;
   }
-  .point-1{
-    width: 48px!important;
-    height: 24px!important;
-    margin-left: 50px!important;
-    margin-top: -170px!important;
+  .point-1 {
+    width: 48px !important;
+    height: 24px !important;
+    margin-left: 50px !important;
+    margin-top: -170px !important;
   }
   .Ellipse-2 {
     margin-top: 900px !important;
@@ -3122,9 +3148,6 @@ body {
   .reasons {
     grid-template-columns: 102px 102px !important;
     grid-template-rows: 85px 85px 85px !important;
-  }
-  .plan {
-    height: 3000px;
   }
   .in {
     width: 22px;
@@ -3169,18 +3192,18 @@ body {
     margin-top: -400px !important;
   }
 }
-.modal__block input{
+.modal__block input {
   width: 300px;
   height: 50px;
   font-size: 20px;
 }
-.modal-tel placeholder{
+.modal-tel placeholder {
   font-size: 20px;
 }
-.modal__block h3{
+.modal__block h3 {
   margin-top: 50px;
 }
-.verification input{
+.verification input {
   width: 300px;
   height: 50px;
   font-size: 20px;
@@ -3190,7 +3213,7 @@ body {
   flex-direction: column;
   align-content: center;
 }
-.verification button{
+.verification button {
   width: 224px;
   height: 46px;
   background-color: #6b62fd;
@@ -3200,7 +3223,7 @@ body {
   margin-top: 30px;
   margin-left: 60px;
 }
-.phone_form button{
+.phone_form button {
   width: 224px;
   height: 46px;
   background-color: #6b62fd;
