@@ -113,9 +113,9 @@ header .menu button {
   margin-left: 60px;
   margin-left: 80%;
 }
-@media (max-width:1600px) {
-  .menu a{
-    font-size: 16px!important;
+@media (max-width: 1600px) {
+  .menu a {
+    font-size: 16px !important;
   }
 }
 header .menu.fixed {
@@ -847,6 +847,7 @@ body {
   margin-bottom: 30px;
 }
 .i-text {
+  z-index: 1;
   font-weight: 600;
   font-size: 30px;
   line-height: 52px;
@@ -1751,7 +1752,7 @@ body {
     flex-basis: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
   }
   .div .advantages-item {
@@ -1927,7 +1928,7 @@ body {
   }
   .vyxod {
     font-size: 28px;
-    line-height: 60px;
+    line-height: 40px;
   }
   .footer-link {
     font-size: 20px;
@@ -3074,8 +3075,8 @@ body {
     height: 800px !important;
   }
   .min-menu a {
-    font-size: 16px!important;
-    margin-top: -10px!important;
+    font-size: 16px !important;
+    margin-top: -10px !important;
   }
 
   .aim article {
@@ -3106,25 +3107,26 @@ body {
     grid-row-gap: 100px;
     left: 40% !important;
   }
-  .point-1{
-    width: 48px!important;
-    height: 24px!important;
-    margin-left: 50px!important;
-    margin-top: -170px!important;
+  .point-1 {
+    width: 48px !important;
+    height: 24px !important;
+    margin-left: 50px !important;
+    margin-top: -170px !important;
   }
   .Ellipse-2 {
     margin-top: 900px !important;
   }
   .reason {
-    width: 102px !important;
-    height: 85px !important;
+    width: 120px !important;
+    height: 110px !important;
+    margin-bottom: 25px;
   }
   .reasons {
     grid-template-columns: 102px 102px !important;
-    grid-template-rows: 85px 85px 85px !important;
+    grid-template-rows: 105px 105px 105px !important;
   }
   .plan {
-    height: 3000px;
+    height: 3200px;
   }
   .in {
     width: 22px;
@@ -3152,7 +3154,7 @@ body {
   }
   .reason article {
     width: 100px !important;
-    font-size: 7px !important;
+    font-size: 10px !important;
     line-height: 10px !important;
     padding-left: 7px !important;
   }
@@ -3160,37 +3162,38 @@ body {
     height: 600px !important;
   }
   .block-3 p {
-    font-size: 70px !important;
+    font-size: 65px !important;
+    line-height: 70px !important;
   }
   .left-p {
     margin-top: 220px !important;
   }
   .right-p {
-    margin-top: -400px !important;
+    margin-top: -300px !important;
   }
 }
-.modal__block input{
+.modal__block input {
   width: 300px;
   height: 50px;
   font-size: 20px;
 }
-.modal-tel placeholder{
+.modal-tel placeholder {
   font-size: 20px;
 }
-.modal__block h3{
+.modal__block h3 {
   margin-top: 50px;
 }
-.verification input{
+.verification input {
   width: 300px;
   height: 50px;
   font-size: 20px;
 }
-.verification{
+.verification {
   display: flex;
   flex-direction: column;
   align-content: center;
 }
-.verification button{
+.verification button {
   width: 224px;
   height: 46px;
   background-color: #6b62fd;
@@ -3200,7 +3203,7 @@ body {
   margin-top: 30px;
   margin-left: 60px;
 }
-.phone_form button{
+.phone_form button {
   width: 224px;
   height: 46px;
   background-color: #6b62fd;
@@ -3211,41 +3214,67 @@ body {
   margin-left: 60px;
 }
 @media (max-width: 1100px) {
-
-  .modal__block{
-    width: 40%!important;
+  .modal__block {
+    width: 40% !important;
   }
 }
 @media (max-width: 1000px) {
-  .modal__block{
-    width: 40%!important;
+  .modal__block {
+    width: 40% !important;
   }
 }
 @media (max-width: 800px) {
-  .modal__block{
-    width: 60%!important;
+  .modal__block {
+    width: 60% !important;
   }
 }
 @media (max-width: 570px) {
-  .modal__block{
-    width: 80%!important;
+  .modal__block {
+    width: 80% !important;
+  }
+  .time-section {
+    padding: 0 15px;
   }
 }
 @media (max-width: 400px) {
-  .modal__block{
-    width: 100%!important;
+  .modal__block {
+    width: 100% !important;
   }
-  .verification input{
+  .verification input {
     width: 250px;
   }
-  .modal__block input{
+  .modal__block input {
     width: 250px;
   }
-  .verification{
+  .verification {
     flex-direction: column;
     align-items: center;
   }
-  .modal__block button{
-    margin-left: 20px!important;
+  .modal__block button {
+    margin-left: 20px !important;
+  }
+  .group3 {
+    top: 50%;
+    width: 17%;
+    height: 34%;
+  }
+  .ellipse1 {
+    top: 3%;
+    left: 2%;
+    width: 12%;
+    height: 24%;
+  }
+}
+@media (max-width: 350px) {
+  .group3 {
+    left: 0%;
+    top: 54%;
+    height: 30%;
+  }
+  .ellipse2 {
+    top: 55%;
+    right: 1%;
+    width: 15%;
+    height: 26%;
   }
 }
