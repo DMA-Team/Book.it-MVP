@@ -3278,3 +3278,14 @@ body {
     height: 26%;
   }
 }
+@media (max-width: 751px) {
+  .reasons{
+    grid-template-columns: 475px;
+    grid-template-rows: 115px 143px 122px 144px 121px 145px;
+  }
+  .reason{
+    height: auto;
+    display: grid;
+    grid-template-columns: 44px 415px;
+  }
+}
