@@ -2615,6 +2615,10 @@ body {
   }
 }
 @media (max-width: 385px) {
+  * {
+    border: 1px solid rgb(255, 38, 0);
+    box-sizing: border-box;
+  }
   .plan {
     height: 3200px;
   }
@@ -2629,10 +2633,6 @@ body {
   }
 }
 @media (max-width: 370px) {
-  * {
-    border: 1px solid rgb(255, 38, 0);
-    box-sizing: border-box;
-  }
   .step-content {
     height: 250px;
     padding: 30px 30px;
@@ -3078,8 +3078,8 @@ body {
   }
 }
 @media (max-width: 500px) {
-  .main-h{
-    grid-template-columns: 140px 200px!important;
+  .main-h {
+    grid-template-columns: 140px 200px !important;
   }
   .main-h h1 {
     width: 200px !important;
