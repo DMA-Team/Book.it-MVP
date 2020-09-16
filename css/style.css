@@ -3128,49 +3128,7 @@ body {
   .plan {
     height: 3200px;
   }
-  .in {
-    width: 22px;
-    height: 22px;
-  }
-  .rocket {
-    width: 16px;
-    height: 16px;
-  }
-  .analytics {
-    width: 16px;
-    height: 18px;
-  }
-  .calendar {
-    width: 17px;
-    height: 17px;
-  }
-  .speak {
-    width: 16px;
-    height: 16px;
-  }
-  .salon-img {
-    width: 17px;
-    height: 17px;
-  }
-  .reason article {
-    width: 100px !important;
-    font-size: 10px !important;
-    line-height: 10px !important;
-    padding-left: 7px !important;
-  }
-  .block-3 {
-    height: 600px !important;
-  }
-  .block-3 p {
-    font-size: 65px !important;
-    line-height: 70px !important;
-  }
-  .left-p {
-    margin-top: 220px !important;
-  }
-  .right-p {
-    margin-top: -300px !important;
-  }
+
 }
 .modal__block input {
   width: 300px;
@@ -3279,13 +3237,65 @@ body {
   }
 }
 @media (max-width: 751px) {
+  .block-3{
+    height: 1085px!important;
+  }
   .reasons{
-    grid-template-columns: 475px;
-    grid-template-rows: 115px 143px 122px 144px 121px 145px;
+    grid-template-columns: 475px!important;
+    grid-template-rows: 115px 143px 122px 144px 121px 145px!important;
   }
   .reason{
-    height: auto;
-    display: grid;
-    grid-template-columns: 44px 415px;
+    height: auto!important;
+    display: grid!important;
+    grid-template-columns: 44px 415px!important;
+    width: 475px!important;
+  }
+  .reason article{
+    height: auto!important;
+    width: auto!important;
+    font-size: 22px!important;
+    line-height: 30px!important;
+  }
+}
+@media (max-width: 700px) {
+  .reasons{
+    grid-template-columns: 425px!important;
+    grid-template-rows: 115px 143px 122px 144px 121px 145px!important;
+  }
+  .reason{
+    height: auto!important;
+    display: grid!important;
+    grid-template-columns: 45px 380px!important;
+    width: 425px!important;
+  }
+  .reason article{
+    height: auto!important;
+    width: 350px!important;
+    font-size: 20px!important;
+    line-height: 27px!important;
+  }
+}
+@media (max-width: 600px) {
+  .block-3 p{
+    visibility: hidden;
+  }
+}
+@media (max-width: 500px) {
+  .reason article{
+    font-size: 18px!important;
+  }
+}
+@media (max-width: 450px) {
+  .reason{
+    width: 250px!important;
+    grid-template-columns: 45px 200px!important;
+  }
+  .reasons{
+    grid-template-columns: 250px!important;
+  }
+  .reason article{
+    font-size: 13px!important;
+    line-height: 20px!important;
+    width: 190px!important;
   }
 }
