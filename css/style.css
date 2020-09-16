@@ -1740,6 +1740,7 @@ body {
   }
   .macbook {
     flex-basis: 100%;
+    width: 70%;
   }
   .first-part {
     flex-basis: 100%;
@@ -2395,7 +2396,7 @@ body {
 /* BEKA */
 @media (max-width: 490px) {
   .plan {
-    height: 2500px;
+    height: 3000px;
   }
   .plan-title {
     font-size: 40px;
@@ -2450,18 +2451,6 @@ body {
     line-height: 22px;
     max-width: 250px;
   }
-  /*
-  .second-part {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-  }
-  .div {
-    flex-basis: 100%;
-    margin-bottom: 20px;
-  } */
   .instagram {
     height: 250px;
   }
@@ -2583,6 +2572,9 @@ body {
   .screen {
     height: 1450px;
   }
+  .plan {
+    height: 2500px;
+  }
   .opisanie {
     font-size: 11px;
     line-height: 13px;
@@ -2631,6 +2623,9 @@ body {
   }
 }
 @media (max-width: 370px) {
+  .plan {
+    height: 3200px;
+  }
   .salons-content {
     width: 220px;
     height: 360px;
@@ -2679,7 +2674,7 @@ body {
     font-size: 12.5px;
   }
   .r-btn {
-    font-size: 20px;
+    font-size: 17px;
   }
   .screen {
     height: 1350px;
@@ -3125,10 +3120,6 @@ body {
     grid-template-columns: 102px 102px !important;
     grid-template-rows: 105px 105px 105px !important;
   }
-  .plan {
-    height: 3200px;
-  }
-
 }
 .modal__block input {
   width: 300px;
@@ -3237,65 +3228,65 @@ body {
   }
 }
 @media (max-width: 751px) {
-  .block-3{
-    height: 1085px!important;
+  .block-3 {
+    height: 1085px !important;
   }
-  .reasons{
-    grid-template-columns: 475px!important;
-    grid-template-rows: 115px 143px 122px 144px 121px 145px!important;
+  .reasons {
+    grid-template-columns: 475px !important;
+    grid-template-rows: 115px 143px 122px 144px 121px 145px !important;
   }
-  .reason{
-    height: auto!important;
-    display: grid!important;
-    grid-template-columns: 44px 415px!important;
-    width: 475px!important;
+  .reason {
+    height: auto !important;
+    display: grid !important;
+    grid-template-columns: 44px 415px !important;
+    width: 475px !important;
   }
-  .reason article{
-    height: auto!important;
-    width: auto!important;
-    font-size: 22px!important;
-    line-height: 30px!important;
+  .reason article {
+    height: auto !important;
+    width: auto !important;
+    font-size: 22px !important;
+    line-height: 30px !important;
   }
 }
 @media (max-width: 700px) {
-  .reasons{
-    grid-template-columns: 425px!important;
-    grid-template-rows: 115px 143px 122px 144px 121px 145px!important;
+  .reasons {
+    grid-template-columns: 425px !important;
+    grid-template-rows: 115px 143px 122px 144px 121px 145px !important;
   }
-  .reason{
-    height: auto!important;
-    display: grid!important;
-    grid-template-columns: 45px 380px!important;
-    width: 425px!important;
+  .reason {
+    height: auto !important;
+    display: grid !important;
+    grid-template-columns: 45px 380px !important;
+    width: 425px !important;
   }
-  .reason article{
-    height: auto!important;
-    width: 350px!important;
-    font-size: 20px!important;
-    line-height: 27px!important;
+  .reason article {
+    height: auto !important;
+    width: 350px !important;
+    font-size: 20px !important;
+    line-height: 27px !important;
   }
 }
 @media (max-width: 600px) {
-  .block-3 p{
+  .block-3 p {
     visibility: hidden;
   }
 }
 @media (max-width: 500px) {
-  .reason article{
-    font-size: 18px!important;
+  .reason article {
+    font-size: 18px !important;
   }
 }
 @media (max-width: 450px) {
-  .reason{
-    width: 250px!important;
-    grid-template-columns: 45px 200px!important;
+  .reason {
+    width: 250px !important;
+    grid-template-columns: 45px 200px !important;
   }
-  .reasons{
-    grid-template-columns: 250px!important;
+  .reasons {
+    grid-template-columns: 250px !important;
   }
-  .reason article{
-    font-size: 13px!important;
-    line-height: 20px!important;
-    width: 190px!important;
+  .reason article {
+    font-size: 13px !important;
+    line-height: 20px !important;
+    width: 190px !important;
   }
 }
