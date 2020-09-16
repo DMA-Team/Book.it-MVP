@@ -2437,19 +2437,20 @@ body {
   .advantages-item {
     width: 150px;
     height: 200px;
+    padding-top: 5px;
   }
   .advantages-icon {
     width: 40px;
     height: 40px;
-    margin-bottom: 5px;
+    margin-bottom: 0;
   }
   .advantages-title {
-    font-size: 18px;
+    font-size: 15px;
     margin-bottom: 0px;
   }
   .advantages-text {
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 20px;
     max-width: 250px;
   }
   .instagram {
@@ -2570,10 +2571,6 @@ body {
   /* BEKA */
 }
 @media (max-width: 420px) {
-  * {
-    border: 1px solid rgb(255, 38, 0);
-    box-sizing: border-box;
-  }
   .screen {
     height: 1450px;
   }
@@ -2631,6 +2628,29 @@ body {
   }
 }
 @media (max-width: 370px) {
+  * {
+    border: 1px solid rgb(255, 38, 0);
+    box-sizing: border-box;
+  }
+  .step-content {
+    height: 250px;
+    padding: 30px 30px;
+  }
+  .step-title {
+    font-size: 22px;
+  }
+  .step-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .i-text {
+    font-size: 18px;
+    line-height: 27px;
+    max-width: 350px;
+  }
+  .subscribe {
+    margin-top: 5%;
+  }
   .salons-content {
     width: 220px;
     height: 360px;
@@ -2688,6 +2708,13 @@ body {
     width: 150px;
     margin-right: 30px;
     margin-left: 30px;
+  }
+  .footer-link {
+    font-size: 16px;
+  }
+  .DMA {
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 @media (max-width: 320px) {
