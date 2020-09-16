@@ -2398,7 +2398,7 @@ body {
 /* BEKA */
 @media (max-width: 490px) {
   .plan {
-    height: 3000px;
+    height: 2500px;
   }
   .plan-title {
     font-size: 40px;
@@ -2599,7 +2599,6 @@ body {
   .toprightt {
     width: 100%;
   }
-
   .c-heading {
     font-size: 19px;
   }
@@ -2620,7 +2619,7 @@ body {
     box-sizing: border-box;
   }
   .plan {
-    height: 3200px;
+    height: 2500px;
   }
   .tabs-button {
     font-size: 20px;
@@ -2633,6 +2632,9 @@ body {
   }
 }
 @media (max-width: 370px) {
+  .plan {
+    height: 3200px;
+  }
   .step-content {
     height: 250px;
     padding: 30px 30px;
