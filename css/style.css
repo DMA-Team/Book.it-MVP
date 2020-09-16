@@ -1741,6 +1741,7 @@ body {
   .macbook {
     flex-basis: 100%;
     width: 70%;
+    height: 50%;
   }
   .first-part {
     flex-basis: 100%;
@@ -2569,6 +2570,10 @@ body {
   /* BEKA */
 }
 @media (max-width: 420px) {
+  * {
+    border: 1px solid rgb(255, 38, 0);
+    box-sizing: border-box;
+  }
   .screen {
     height: 1450px;
   }
@@ -2612,6 +2617,9 @@ body {
   }
 }
 @media (max-width: 385px) {
+  .plan {
+    height: 3200px;
+  }
   .tabs-button {
     font-size: 20px;
   }
@@ -2623,9 +2631,6 @@ body {
   }
 }
 @media (max-width: 370px) {
-  .plan {
-    height: 3200px;
-  }
   .salons-content {
     width: 220px;
     height: 360px;
