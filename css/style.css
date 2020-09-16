@@ -41,6 +41,7 @@ body {
 }
 header {
   height: 1015px;
+  width: 100%;
 }
 button {
   cursor: pointer;
@@ -3077,8 +3078,11 @@ body {
   }
 }
 @media (max-width: 500px) {
+  .main-h{
+    grid-template-columns: 140px 200px!important;
+  }
   .main-h h1 {
-    width: 220px !important;
+    width: 200px !important;
     font-size: 20px !important;
     line-height: 33px !important;
     grid-column: 2;
@@ -3090,7 +3094,6 @@ body {
   .main-h img:first-of-type {
     width: 140px !important;
     height: 125.41px !important;
-    margin-left: 100px !important;
   }
   header button {
     width: 183px !important;
@@ -3138,7 +3141,7 @@ body {
     width: 48px !important;
     height: 24px !important;
     margin-left: 50px !important;
-    margin-top: -170px !important;
+    margin-top: -100px !important;
   }
   .Ellipse-2 {
     margin-top: 900px !important;
