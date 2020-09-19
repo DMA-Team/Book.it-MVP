@@ -1,4 +1,6 @@
 "use strict";
+AOS.init();
+
 const tSalons = document.querySelector(".t-salons");
 const tMasters = document.querySelector(".t-masters");
 const wrapperSalon = document.querySelector(".wrapper-salon");

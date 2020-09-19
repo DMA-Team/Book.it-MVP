@@ -715,7 +715,6 @@ body {
   flex-basis: 70%;
   align-items: center;
   margin-bottom: 50px;
-  transition: 1s;
 }
 
 #Macbook.when_item_hover {
@@ -2614,10 +2613,10 @@ body {
   }
 }
 @media (max-width: 385px) {
-  * {
+  /* * {
     border: 1px solid rgb(255, 38, 0);
     box-sizing: border-box;
-  }
+  } */
   .plan {
     height: 2500px;
   }
